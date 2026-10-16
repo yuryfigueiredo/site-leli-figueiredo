@@ -240,7 +240,12 @@ const projects: Project[] = [
         kind: "frame",
         focalPoint: "50% 50%",
       },
-      video: null,
+      video: {
+        provider: "youtube",
+        id: "p6gZkT7PI5U",
+        status: "available",
+        checkedOn: "2026-10-16",
+      },
       externalLink: null,
     },
     featuredOrder: 2,

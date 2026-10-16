@@ -23,8 +23,8 @@ const { featured, navigation, uiLabels } = portfolioData;
  * (a ordem segue `featuredOrder`; no celular tudo vira uma coluna.)
  */
 const SPANS = [
-  "lg:col-span-8",
-  "lg:col-span-4 lg:self-start lg:pt-6",
+  "lg:col-span-7",
+  "lg:col-span-5",
   "lg:col-span-5",
   "lg:col-span-7",
   "lg:col-span-7",
@@ -34,8 +34,8 @@ const SPANS = [
 ];
 
 const SIZES = [
-  "(min-width: 1320px) 800px, (min-width: 1024px) 66vw, 100vw",
-  "(min-width: 1320px) 400px, (min-width: 1024px) 33vw, 100vw",
+  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
+  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
   "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
   "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
   "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
