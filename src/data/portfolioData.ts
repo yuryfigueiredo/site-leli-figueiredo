@@ -173,7 +173,7 @@ const projects: Project[] = [
       },
       video: {
         provider: "youtube",
-        id: "k-af__uQ6CM",
+        id: "9vnBsXIWq4o",
         status: "available",
         checkedOn: "2026-10-16",
       },
