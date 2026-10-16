@@ -1,0 +1,61 @@
+Você é responsável por criar uma nova versão visual do portfólio de Leli Figueiredo no projeto existente. Trabalhe sobre a aplicação atual, preservando seus conteúdos reais, dados de obras e funcionalidades. O objetivo é uma página cinematográfica, elegante e visualmente preenchida, sem as grandes faixas vazias nas laterais que aparecem hoje em telas largas.
+
+## Direção visual escolhida
+
+Crie a versão **Cinema**. Use a identidade atual como ponto de partida: preto quase absoluto (`#09090B`), superfícies grafite (`#121216`), texto claro (`#FAFAFA`) e âmbar (`#F59E0B`) para botões e detalhes pontuais. O logo colorido da Aquarela Multimídia deve ser o elemento de cor mais marcante da primeira tela. Use o arquivo original do projeto; não redesenhe, recolora ou gere outro logo.
+
+A sensação desejada é a de um portfólio de uma profissional experiente do audiovisual: imagens amplas, tipografia expressiva, composição precisa e navegação simples. Evite aparência de template, excesso de cartões com borda, gradientes decorativos e animações constantes.
+
+Referências para estudar, sem copiar:
+
+- [Paul Harb](https://paulharb.com/): obras apresentadas com imagens grandes e organização por tipo de trabalho.
+- [Kevin Klauber](https://www.kevinklauber.com/): acesso rápido ao trabalho, à trajetória e ao contato.
+- [TJ Martin](https://tjmartin.co/): apresentação autoral e concisa de um profissional do audiovisual.
+
+## Principal problema a resolver: espaços laterais
+
+A classe `.shell`, em `C:\Users\Yury\Documents\Projetos Yury\Site Leli Figueiredo\src\app\globals.css`, limita praticamente todas as seções a 1320 px e acrescenta padding lateral. Em monitores largos, o conjunto fica como uma faixa estreita no centro. Analise também a definição `maxWidth.shell` em `C:\Users\Yury\Documents\Projetos Yury\Site Leli Figueiredo\tailwind.config.ts`.
+
+Redesenhe o sistema de largura da página. **Imagens de obras, faixas de cor, divisórias e áreas visuais devem poder chegar às bordas da janela.** Textos, menus e botões devem ter uma margem de segurança pequena e consistente, aproximadamente 16–20 px em celulares e até 40–48 px em telas grandes. Limite a largura de parágrafos para manter a leitura confortável, mas não aplique um limite estreito a seções inteiras. Em 1440, 1920 px ou mais, a página deve continuar preenchida e intencional.
+
+## Primeira tela
+
+A primeira tela precisa responder imediatamente: **quem é Leli, o que ela faz e qual é sua empresa**.
+
+- Mantenha “Leli Figueiredo” como título principal, grande e elegante.
+- Mostre claramente “Montadora · Editora Sênior · Finalizadora”.
+- Inclua uma frase curta sobre seus mais de 25 anos em cinema, TV e streaming.
+- Exiba o logo original da Aquarela Multimídia em tamanho generoso no lado direito da composição em desktop. Ele deve estar nítido, proporcional e legível sobre o fundo escuro.
+- Mantenha ações claras para explorar as obras e entrar em contato.
+- Abaixo da abertura, crie uma faixa de largura total com Aquarela Multimídia, Rio de Janeiro e a estrutura de ilha própria.
+- Use a altura e a largura da tela para criar presença, evitando áreas vazias sem função. Se houver imagem de fundo, use somente material do projeto com uso aprovado e garanta que nome, texto e logo continuem legíveis. Uma composição escura sem foto de fundo também é válida.
+
+A ordem visual deve ser: **Leli → profissão → Aquarela → experiência → ação → obras**. No celular, reorganize esses elementos em uma coluna sem esconder o logo nem criar rolagem horizontal.
+
+## Obras e demais seções
+
+Logo depois da abertura, apresente as obras selecionadas em uma galeria cinematográfica larga. Dê protagonismo às imagens existentes, com poucas molduras e intervalos menores entre projetos. Uma obra pode receber mais destaque que as demais. Mantenha títulos, funções e acesso às fichas legíveis. Para obras sem imagem aprovada, use um tratamento tipográfico bem resolvido; não invente cartazes, fotografias, créditos ou prêmios.
+
+Na seção “Sobre”, experimente uma composição dividida: retrato da Leli ocupando uma porção ampla da tela e biografia em uma coluna confortável. Serviços e estrutura técnica devem aproveitar melhor a largura, com hierarquia clara. A filmografia precisa continuar fácil de buscar e filtrar. O contato pode encerrar a página em uma faixa visual forte, com chamada e ação principal evidentes.
+
+Preserve a personalidade do conteúdo existente. Não transforme a trajetória da Leli em textos genéricos de agência e não substitua informações reais por frases inventadas.
+
+## Conteúdo, funcionalidade e implementação
+
+Use `C:\Users\Yury\Documents\Projetos Yury\Site Leli Figueiredo\src\data\portfolioData.ts` como fonte dos conteúdos e créditos. Preserve busca e filtros da filmografia, expansão das obras, fichas dos projetos, links válidos e navegação. Respeite as pendências de publicação documentadas no projeto; não apresente como confirmado aquilo que ainda está pendente.
+
+Este projeto usa uma versão de Next.js com regras próprias. Antes de escrever código, leia o `AGENTS.md` do repositório e os guias relevantes em `node_modules/next/dist/docs/`. Reutilize os componentes existentes quando fizer sentido. Atualize os tamanhos responsivos das imagens se as áreas exibidas mudarem significativamente.
+
+Cuide do contraste, dos estados de foco, da navegação por teclado e da preferência por movimento reduzido. Animações devem ser discretas e servir à navegação. Não use reprodução automática de vídeo.
+
+## Critérios de conclusão
+
+Verifique o resultado em larguras de aproximadamente 360, 390, 768, 1024, 1440 e 1920 px. Em especial, confirme visualmente que:
+
+1. não há grandes faixas laterais vazias nas telas largas;
+2. a primeira tela destaca Leli e o logo da Aquarela sem disputa visual;
+3. as obras ocupam a largura disponível e mantêm títulos e ações legíveis;
+4. não há rolagem horizontal, elementos cortados ou sobreposição no celular;
+5. os conteúdos e controles existentes continuam funcionando.
+
+Ao entregar, mostre capturas da nova página em desktop e celular, explique as escolhas visuais e informe o resultado das verificações de tipo, lint e build. Use a imagem conceitual das versões “Cinema” e “Noite azul” desta conversa apenas como referência de composição; a versão a implementar é **Cinema**, e as imagens ilustrativas do conceito não são conteúdo real do portfólio.
