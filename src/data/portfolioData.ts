@@ -212,6 +212,23 @@ const projects: Project[] = [
     periodLabel: "2023",
     role: "Editora de Imagens",
     organizations: ["Fina Flor Filmes", "Canal Brasil"],
+    media: {
+      image: {
+        src: "/images/projetos/no-ano-que-vem.jpg",
+        alt: "Cena oficial da série No Ano que Vem no Canal Brasil",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "3TLBYamEUDA",
+        status: "available",
+        checkedOn: "2026-10-21",
+      },
+      externalLink: null,
+    },
     featuredOrder: 5,
     actionLabel: "Ver projeto",
   }),
@@ -271,6 +288,23 @@ const projects: Project[] = [
     periodLabel: "2021/2022",
     role: "Editora",
     organizations: ["HBO Max"],
+    media: {
+      image: {
+        src: "/images/projetos/7-chances-para.jpg",
+        alt: "Frame oficial da série 7 Chances Para... no Discovery Kids Brasil",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "prMOiriC3_0",
+        status: "available",
+        checkedOn: "2026-10-21",
+      },
+      externalLink: null,
+    },
     featuredOrder: 7,
     actionLabel: "Ver projeto",
     sourceNotes: [
