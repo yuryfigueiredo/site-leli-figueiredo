@@ -195,6 +195,29 @@ const projects: Project[] = [
     presentationCategory: "Séries de TV & Streaming",
     periodLabel: "1ª a 3ª temporada • 2022/2024",
     role: "Editora",
+    description:
+      "Série documental do SporTV que acompanha os bastidores e desafios da Seleção Brasileira Feminina de Vôlei rumo aos Jogos Olímpicos.",
+    organizations: ["SporTV", "Canal Azul"],
+    media: {
+      image: {
+        src: "/images/projetos/sem-bloqueio.jpg",
+        alt: "Registro oficial da série documental Sem Bloqueio no SporTV",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "H67ooV0U_ck",
+        status: "available",
+        checkedOn: "2026-10-21",
+      },
+      externalLink: {
+        url: "https://globoplay.globo.com/sem-bloqueio/t/5D69j5kP3L/",
+        label: "Ver no Globoplay",
+      },
+    },
     featuredOrder: 8,
     actionLabel: "Ver projeto",
     pendingChecks: [
@@ -385,8 +408,20 @@ const projects: Project[] = [
       "Direção de Sergio Raposo, com Marcelo Rosenbaum, no projeto A Gente Transforma. Exibição na Semana de Design de Milão.",
     organizations: ["+Globosat", "A Gente Transforma"],
     media: {
-      image: null,
-      video: null,
+      image: {
+        src: "/images/projetos/a-forca-da-floresta.jpg",
+        alt: "Frame oficial do documentário A Força da Floresta — Povo Yawanawá",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "vPMti8wO-CQ",
+        status: "available",
+        checkedOn: "2026-10-21",
+      },
       externalLink: {
         url: "https://agentetransforma.org.br/projetos/yawanawa/documentario-a-forca-da-floresta/",
         label: "Ver no A Gente Transforma",
