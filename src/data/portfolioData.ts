@@ -774,8 +774,8 @@ export const portfolioData: PortfolioData = {
     portrait: {
       src: "/images/foto-real-leli.jpg",
       alt: "Leli Figueiredo",
-      width: 1280,
-      height: 961,
+      width: 2386,
+      height: 1792,
       kind: "frame",
       focalPoint: "50% 35%",
     },
