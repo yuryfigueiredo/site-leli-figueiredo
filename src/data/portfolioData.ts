@@ -772,11 +772,11 @@ export const portfolioData: PortfolioData = {
     pullQuote:
       "o carinho, o respeito e o amor pelo material andam juntos na criação da história que vamos contar.",
     portrait: {
-      src: "/images/foto-leli-3.jpg",
-      alt: "Leli Figueiredo na ilha de edição",
-      width: 2048,
-      height: 2048,
-      kind: "poster",
+      src: "/images/foto-real-leli.jpg",
+      alt: "Leli Figueiredo",
+      width: 1280,
+      height: 961,
+      kind: "frame",
       focalPoint: "50% 35%",
     },
   },
