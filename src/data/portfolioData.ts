@@ -88,9 +88,9 @@ const projects: Project[] = [
     media: {
       image: {
         src: "/images/projetos/casa-do-patrao.jpg",
-        alt: "Cena do reality show Casa do Patrão",
-        width: 1280,
-        height: 720,
+        alt: "Moradores reunidos na sala da casa do reality Casa do Patrão",
+        width: 1920,
+        height: 1080,
         kind: "frame",
         focalPoint: "50% 50%",
       },
@@ -445,15 +445,15 @@ const projects: Project[] = [
     media: {
       image: {
         src: "/images/projetos/a-forca-da-floresta.jpg",
-        alt: "Frame oficial do documentário A Força da Floresta — Povo Yawanawá",
-        width: 640,
-        height: 480,
+        alt: "Marcelo Rosenbaum atravessa a fila do povo Yawanawá em cena do documentário A Força da Floresta",
+        width: 1920,
+        height: 1080,
         kind: "frame",
         focalPoint: "50% 50%",
       },
       video: {
         provider: "youtube",
-        id: "Xrito1jMlk4",
+        id: "orVTptPTpM8",
         status: "available",
         checkedOn: "2026-11-02",
       },
@@ -466,7 +466,7 @@ const projects: Project[] = [
     actionLabel: "Ver projeto",
     sourceNotes: [
       'A exibição na Semana de Design de Milão consta "conforme o briefing".',
-      "Vídeo substituído em 2026-11-02: agora é 'A Gente Transforma Yawanawá - A Força da Floresta - Coleção Luminárias'.",
+      "Vídeo em 2026-11-02: trailer oficial 'A FORÇA DA FLORESTA', no canal da própria Leli Figueiredo (1080p).",
     ],
   }),
 
