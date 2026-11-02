@@ -239,9 +239,9 @@ const projects: Project[] = [
     media: {
       image: {
         src: "/images/projetos/no-ano-que-vem.jpg",
-        alt: "Cena oficial da série No Ano que Vem no Canal Brasil",
-        width: 1280,
-        height: 720,
+        alt: "Ana (Júlia Lemmertz) e Bel (Jeniffer Dias) lado a lado num banco de jardim à noite na série No Ano Que Vem",
+        width: 1442,
+        height: 811,
         kind: "frame",
         focalPoint: "50% 50%",
       },
@@ -255,6 +255,10 @@ const projects: Project[] = [
     },
     featuredOrder: 5,
     actionLabel: "Ver projeto",
+    sourceNotes: [
+      "A imagem é um frame limpo do próprio vídeo vinculado (3TLBYamEUDA), sem a arte de divulgação que estava antes.",
+      "O teaser inteiro é uma única cena noturna, por isso a vinheta continua escura nas bordas.",
+    ],
   }),
 
   project({
@@ -285,9 +289,9 @@ const projects: Project[] = [
     media: {
       image: {
         src: "/images/projetos/caravana-das-drags.jpg",
-        alt: "Frame oficial do reality show Caravana das Drags no Amazon Prime Video",
-        width: 1280,
-        height: 720,
+        alt: "Ônibus rosa da Caravana das Drags atravessa a orla do Rio de Janeiro ao pôr do sol, com o Pão de Açúcar ao fundo",
+        width: 1920,
+        height: 1080,
         kind: "frame",
         focalPoint: "50% 50%",
       },
@@ -301,6 +305,9 @@ const projects: Project[] = [
     },
     featuredOrder: 6,
     actionLabel: "Ver projeto",
+    sourceNotes: [
+      "A imagem é um frame do próprio trailer vinculado (p6gZkT7PI5U), sem o letreiro de divulgação que estava antes.",
+    ],
   }),
 
   project({
