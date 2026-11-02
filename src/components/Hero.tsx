@@ -13,7 +13,6 @@ export function Hero() {
 
   return (
     <section
-      id="topo"
       aria-labelledby="hero-title"
       className="relative overflow-hidden pb-14 pt-[calc(var(--header-h)+2rem)] sm:pb-16 lg:pb-14 lg:pt-[calc(var(--header-h)+2.5rem)]"
     >

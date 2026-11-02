@@ -71,7 +71,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={seo.lang} className={`${serif.variable} ${serifItalic.variable} ${sans.variable}`}>
-      <body>
+      <body id="topo">
         <a
           href="#conteudo"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-amber focus:px-5 focus:py-3 focus:font-medium focus:text-ink"

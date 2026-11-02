@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
@@ -18,14 +20,14 @@ export function Footer() {
               Estrutura técnica:
             </span>
             <div
-              className="relative h-6 w-20 shrink-0 opacity-80 transition-opacity duration-200 hover:opacity-100"
+              className="relative h-9 w-[78px] shrink-0 opacity-80 transition-opacity duration-200 hover:opacity-100"
               title={institutionalBrand.name}
             >
               <Image
                 src={institutionalBrand.logo.src}
                 alt={institutionalBrand.logo.alt}
                 fill
-                sizes="80px"
+                sizes="78px"
                 className="object-contain"
               />
             </div>
@@ -40,6 +42,12 @@ export function Footer() {
         </div>
         <a
           href="#topo"
+          onClick={(event) => {
+            // Sem JS a âncora cuida do resto; com JS, rola sempre — inclusive no segundo clique.
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.history.replaceState(null, "", window.location.pathname);
+          }}
           className="link-text inline-flex min-h-11 items-center gap-2 self-start text-[0.9375rem] sm:self-auto"
         >
           <ArrowUp aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />

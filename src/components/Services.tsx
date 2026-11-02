@@ -50,14 +50,14 @@ export function Services() {
                   Ilha Própria
                 </span>
                 <div
-                  className="relative h-6 w-20 shrink-0 opacity-80 transition-opacity duration-200 hover:opacity-100"
+                  className="relative h-9 w-[78px] shrink-0 opacity-80 transition-opacity duration-200 hover:opacity-100"
                   title={institutionalBrand.name}
                 >
                   <Image
                     src={institutionalBrand.logo.src}
                     alt={institutionalBrand.logo.alt}
                     fill
-                    sizes="80px"
+                    sizes="78px"
                     className="object-contain object-right"
                   />
                 </div>
