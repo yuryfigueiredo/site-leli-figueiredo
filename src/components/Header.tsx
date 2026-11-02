@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { portfolioData } from "@/data/portfolioData";
 import { whatsappUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -20,6 +22,8 @@ export function Header() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const closeMenu = useCallback((restoreFocus: boolean) => {
     setMenuOpen(false);
@@ -107,24 +111,25 @@ export function Header() {
       className="fixed inset-x-0 top-0 z-40 h-header border-b border-line bg-ink/85 backdrop-blur-md"
     >
       <div className="shell flex h-full items-center justify-between gap-6">
-        <a
-          href="#topo"
+        <Link
+          href={isHomePage ? "#topo" : "/#topo"}
           aria-label={uiLabels.headerHomeLabel}
           className="flex min-h-11 items-center leading-tight"
         >
           <span className="font-serif text-[1.375rem] tracking-wide text-paper">
             {identity.displayName}
           </span>
-        </a>
+        </Link>
 
         <nav aria-label={navigation.ariaLabel} className="hidden items-center gap-1 lg:flex">
           <ul className="flex items-center gap-1">
             {desktopItems.map((item) => {
               const current = activeId === item.id;
+              const href = isHomePage ? item.href : `/${item.href}`;
               return (
                 <li key={item.id}>
-                  <a
-                    href={item.href}
+                  <Link
+                    href={href}
                     aria-current={current ? "location" : undefined}
                     className={cn(
                       "flex min-h-11 items-center border-b border-transparent px-3 text-[0.9375rem] transition-colors hover:text-paper",
@@ -132,19 +137,19 @@ export function Header() {
                     )}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
           </ul>
-          <a
-            href={cta.href}
+          <Link
+            href={cta.external ? cta.href : (isHomePage ? cta.href : `/${cta.href}`)}
             {...(cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="ml-4 inline-flex min-h-11 items-center border border-amber px-5 text-[0.9375rem] font-medium text-amber transition-colors hover:bg-amber hover:text-ink"
           >
             {cta.label}
             {cta.external ? <span className="sr-only">{uiLabels.externalLinkHint}</span> : null}
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -178,30 +183,24 @@ export function Header() {
           >
             <nav aria-label={navigation.ariaLabel} className="shell py-3">
               <ul className="divide-y divide-line">
-                {navigation.items.map((item) => (
-                  <li key={item.id}>
-                    <a
-                      href={item.href}
-                      onClick={(event) => {
-                        // Fecha o menu (libera rolagem e fundo inerte) e só então rola até a seção.
-                        event.preventDefault();
-                        closeMenu(false);
-                        const hash = item.href;
-                        window.setTimeout(() => {
-                          document.getElementById(hash.slice(1))?.scrollIntoView();
-                          window.history.replaceState(null, "", hash);
-                        }, 60);
-                      }}
-                      aria-current={activeId === item.id ? "location" : undefined}
-                      className="flex min-h-14 items-center justify-between font-serif text-[1.75rem] text-paper"
-                    >
-                      {item.label}
-                      {activeId === item.id ? (
-                        <span aria-hidden="true" className="h-px w-8 bg-amber" />
-                      ) : null}
-                    </a>
-                  </li>
-                ))}
+                {navigation.items.map((item) => {
+                  const href = isHomePage ? item.href : `/${item.href}`;
+                  return (
+                    <li key={item.id}>
+                      <Link
+                        href={href}
+                        onClick={() => closeMenu(false)}
+                        aria-current={activeId === item.id ? "location" : undefined}
+                        className="flex min-h-14 items-center justify-between font-serif text-[1.75rem] text-paper"
+                      >
+                        {item.label}
+                        {activeId === item.id ? (
+                          <span aria-hidden="true" className="h-px w-8 bg-amber" />
+                        ) : null}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
               {cta.external ? (
                 <a
