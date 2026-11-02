@@ -46,34 +46,15 @@ export function Hero() {
             </ButtonLink>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-y-2 border-t border-line pt-5 text-[0.9375rem] text-mute">
+          <ul className="mt-10 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5 text-[0.9375rem] text-mute">
             {hero.technicalLine.map((item) => (
-              <li
-                key={item}
-                className="after:mx-4 after:text-amber after:content-['•'] last:after:hidden"
-              >
-                {item}
-              </li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
 
-        <div className={hero.image ? "lg:col-span-5" : "hidden lg:col-span-5 lg:flex lg:flex-col"}>
-          {hero.image ? (
-            <div className="relative aspect-[4/5] w-full overflow-hidden border border-line bg-surface">
-              <Image
-                src={hero.image.src}
-                alt={hero.image.alt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-                style={hero.image.focalPoint ? { objectPosition: hero.image.focalPoint } : undefined}
-              />
-            </div>
-          ) : (
-            <HeroComposition />
-          )}
+        <div className="hidden lg:col-span-5 lg:flex lg:flex-col">
+          <HeroComposition />
         </div>
       </div>
     </section>
@@ -124,7 +105,7 @@ function HeroComposition() {
             fill
             sizes="(min-width: 1024px) 38vw, 90vw"
             className="object-contain"
-            priority
+            preload
           />
         </div>
       </div>

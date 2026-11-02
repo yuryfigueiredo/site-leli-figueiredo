@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Check, Search, X } from "lucide-react";
+import Link from "next/link";
 import { portfolioData } from "@/data/portfolioData";
 import type { CategoryId, Project } from "@/data/types";
 import {
@@ -14,7 +15,6 @@ import {
 import { cn, fillTemplate } from "@/lib/utils";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import { useProjectDialog } from "./ProjectDialogProvider";
 
 const { filmography, navigation, uiLabels } = portfolioData;
 
@@ -180,7 +180,6 @@ export function Filmography() {
 }
 
 function CreditRow({ project }: { project: Project }) {
-  const { openProject } = useProjectDialog();
   const dossier = hasDossier(project);
 
   const credits = [
@@ -203,14 +202,12 @@ function CreditRow({ project }: { project: Project }) {
 
       <div className="min-w-0">
         {dossier ? (
-          <button
-            type="button"
-            aria-haspopup="dialog"
-            onClick={() => openProject(project.slug)}
-            className="inline-flex min-h-11 items-center text-left font-serif text-[clamp(1.375rem,1.2rem+0.6vw,1.75rem)] leading-tight text-paper after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-[-2px] focus-visible:after:outline-amber"
+          <Link
+            href={`/obras/${project.slug}`}
+            className="inline-flex min-h-11 items-center text-left font-serif text-[clamp(1.375rem,1.2rem+0.6vw,1.75rem)] leading-tight text-paper after:absolute after:inset-0 after:content-[''] hover:text-amber focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-[-2px] focus-visible:after:outline-amber"
           >
             {project.title}
-          </button>
+          </Link>
         ) : (
           <p className="font-serif text-[clamp(1.375rem,1.2rem+0.6vw,1.75rem)] leading-tight text-paper">
             {project.title}

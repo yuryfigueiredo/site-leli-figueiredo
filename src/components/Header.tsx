@@ -104,7 +104,7 @@ export function Header() {
   return (
     <header
       onKeyDown={onKeyDown}
-      className="fixed inset-x-0 top-0 z-40 h-header border-b border-line bg-ink/95"
+      className="fixed inset-x-0 top-0 z-40 h-header border-b border-line bg-ink/85 backdrop-blur-md"
     >
       <div className="shell flex h-full items-center justify-between gap-6">
         <a

@@ -16,30 +16,36 @@ export function About() {
       aria-labelledby="sobre-titulo"
       className="section-pad border-t border-line"
     >
-      <div className="shell grid gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-16">
-        <Reveal className="lg:col-span-5 lg:flex lg:flex-col lg:justify-between">
+      <div className="shell grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-16">
+        <Reveal className="lg:col-span-5 lg:flex lg:flex-col lg:gap-8">
           <SectionHeading id="sobre-titulo" eyebrow={eyebrow} title={biography.title} />
+
           {portrait ? (
-            <figure className="mt-8 flex flex-1 flex-col justify-between sm:mt-10">
-              <div className="relative aspect-[4/3] w-full overflow-hidden border border-line bg-surface sm:aspect-[1/1] lg:aspect-auto lg:flex-1">
+            <figure className="mt-8 flex flex-col gap-5 sm:mt-10">
+              <div className="relative aspect-[4/3] w-full overflow-hidden border border-line bg-surface sm:aspect-[1/1]">
                 <Image
                   src={portrait.src}
                   alt={portrait.alt}
                   fill
+                  preload
                   sizes="(min-width: 1024px) 38vw, (min-width: 640px) 70vw, 100vw"
                   className="object-cover"
                   style={portrait.focalPoint ? { objectPosition: portrait.focalPoint } : undefined}
-                  priority
                 />
               </div>
-              <figcaption className="mt-3 text-[0.8125rem] text-mute">
+              <blockquote className="border-l border-amber pl-5">
+                <p className="font-serif-italic text-fluid-sm italic text-paper">
+                  &ldquo;{biography.pullQuote}&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="text-[0.8125rem] text-mute">
                 Leli Figueiredo na ilha de edição • Aquarela Multimídia
               </figcaption>
             </figure>
           ) : (
             <figure className="mt-10 border-l border-amber pl-6">
               <blockquote className="font-serif-italic text-fluid-statement italic text-paper">
-                “{biography.pullQuote}”
+                &ldquo;{biography.pullQuote}&rdquo;
               </blockquote>
             </figure>
           )}

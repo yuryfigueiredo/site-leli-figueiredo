@@ -83,7 +83,7 @@ export function WorkArtwork({
           width={image.width}
           height={image.height}
           sizes={sizes}
-          priority={priority}
+          preload={priority}
           loading={priority ? undefined : "lazy"}
           className={cn(
             "h-full w-full",

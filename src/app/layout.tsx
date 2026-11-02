@@ -5,7 +5,6 @@ import { isPreview, siteUrl } from "@/lib/site";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { ProjectDialogProvider } from "@/components/ProjectDialogProvider";
 import "./globals.css";
 
 const serif = Instrument_Serif({
@@ -37,7 +36,10 @@ const { seo, identity, uiLabels } = portfolioData;
 export const metadata: Metadata = {
   // Sem domínio oficial informado, o fallback local só serve para resolver URLs em desenvolvimento.
   metadataBase: new URL(siteUrl ?? "http://localhost:3000"),
-  title: seo.title,
+  title: {
+    default: seo.title,
+    template: "%s | Leli Figueiredo",
+  },
   description: seo.description,
   applicationName: identity.name,
   authors: [{ name: identity.name }],
@@ -76,13 +78,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           {uiLabels.skipToContent}
         </a>
-        <ProjectDialogProvider>
-          <Header />
-          <main id="conteudo" tabIndex={-1} className="outline-none">
-            {children}
-          </main>
-          <Footer />
-        </ProjectDialogProvider>
+        <Header />
+        <main id="conteudo" tabIndex={-1} className="outline-none">
+          {children}
+        </main>
+        <Footer />
         <JsonLd />
       </body>
     </html>

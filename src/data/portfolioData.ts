@@ -45,15 +45,15 @@ function project(
 
 const ROLE_ROOTS = "Assistência a João Paulo de Carvalho";
 const ROOTS_NOTE =
-  "Função derivada do título do grupo “Raízes — Assistência a João Paulo de Carvalho” do briefing.";
+  'Função derivada do título do grupo "Raízes — Assistência a João Paulo de Carvalho" do briefing.';
 const GROUPED_SERIES_NOTE =
-  "Origem do agrupamento 7 Chances Para... / Sem Bloqueio: “Edição completa de temporadas infantojuvenis e dramáticas para canais pagos e plataformas globais”. Não atribuir cada formato a uma obra específica sem confirmação.";
+  'Origem do agrupamento 7 Chances Para... / Sem Bloqueio: "Edição completa de temporadas infantojuvenis e dramáticas para canais pagos e plataformas globais". Não atribuir cada formato a uma obra específica sem confirmação.';
 const SPLIT_NOTE =
   "Título desmembrado de um agrupamento original; o período é o do agrupamento, sem dedução de datas individuais.";
 
 /**
  * ORDEM EDITORIAL (explícita e determinística): a ordem desta lista é a ordem do
- * catálogo na visão “Todos” e nos filtros. Segue o ano final do período informado
+ * catálogo na visão "Todos" e nos filtros. Segue o ano final do período informado
  * (do mais recente ao mais antigo); registros sem ano (Big Brother Brasil e o
  * reality inédito) têm posição editorial fixa. Nenhuma data foi inventada.
  */
@@ -146,44 +146,10 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 4,
+    featuredOrder: 2,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "A conexão com Prenda Minha é desenvolvida na biografia, sem repetir a narrativa aqui.",
-    ],
-  }),
-
-  project({
-    id: "big-brother-brasil",
-    slug: "big-brother-brasil",
-    title: "Big Brother Brasil",
-    categories: ["tv-streaming"],
-    presentationCategory: "Reality Shows",
-    periodLabel: "Edições 1, 3, 4, 5 e 13",
-    role: "Editora Sênior de Imagens",
-    description: "Participação nas edições 1, 3, 4, 5 e 13 do Big Brother Brasil.",
-    media: {
-      image: {
-        src: "/images/projetos/big-brother-brasil.jpg",
-        alt: "Registro do Big Brother Brasil pela TV Globo",
-        width: 1280,
-        height: 720,
-        kind: "frame",
-        focalPoint: "50% 50%",
-      },
-      video: {
-        provider: "youtube",
-        id: "9vnBsXIWq4o",
-        status: "available",
-        checkedOn: "2026-10-16",
-      },
-      externalLink: null,
-    },
-    featuredOrder: 3,
-    actionLabel: "Ver créditos",
-    sourceNotes: [
-      "Não informar intervalo de anos: apenas as edições foram fornecidas.",
-      "Posição no catálogo: ordem editorial fixa, por não haver ano informado.",
     ],
   }),
 
@@ -218,7 +184,7 @@ const projects: Project[] = [
         label: "Ver no Globoplay",
       },
     },
-    featuredOrder: 8,
+    featuredOrder: 3,
     actionLabel: "Ver projeto",
     pendingChecks: [
       "Confirmar a plataforma/canal individual (o destaque original reunia duas obras e duas plataformas: HBO Max / Discovery).",
@@ -252,7 +218,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 5,
+    featuredOrder: 4,
     actionLabel: "Ver projeto",
   }),
 
@@ -298,7 +264,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 2,
+    featuredOrder: 5,
     actionLabel: "Ver projeto",
   }),
 
@@ -328,7 +294,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 7,
+    featuredOrder: 6,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "Associação a HBO Max vem da biografia (individual). O bloco original associava a obra e Sem Bloqueio a HBO Max / Discovery em conjunto.",
@@ -370,12 +336,46 @@ const projects: Project[] = [
   }),
 
   project({
+    id: "big-brother-brasil",
+    slug: "big-brother-brasil",
+    title: "Big Brother Brasil",
+    categories: ["tv-streaming"],
+    presentationCategory: "Reality Shows",
+    periodLabel: "Edições 1, 3, 4, 5 e 13",
+    role: "Editora Sênior de Imagens",
+    description: "Participação nas edições 1, 3, 4, 5 e 13 do Big Brother Brasil.",
+    media: {
+      image: {
+        src: "/images/projetos/big-brother-brasil.jpg",
+        alt: "Registro do Big Brother Brasil pela TV Globo",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "9vnBsXIWq4o",
+        status: "available",
+        checkedOn: "2026-10-16",
+      },
+      externalLink: null,
+    },
+    featuredOrder: 7,
+    actionLabel: "Ver créditos",
+    sourceNotes: [
+      "Não informar intervalo de anos: apenas as edições foram fornecidas.",
+      "Posição no catálogo: ordem editorial fixa, por não haver ano informado.",
+    ],
+  }),
+
+  project({
     id: "encontro",
     slug: "encontro",
     title: "Encontro",
     categories: ["tv-streaming"],
     periodLabel: "2015/2016",
-    sourceNotes: ["Original: “Encontro e É de Casa”. " + SPLIT_NOTE],
+    sourceNotes: ['Original: "Encontro e É de Casa". ' + SPLIT_NOTE],
   }),
 
   project({
@@ -384,7 +384,7 @@ const projects: Project[] = [
     title: "É de Casa",
     categories: ["tv-streaming"],
     periodLabel: "2015/2016",
-    sourceNotes: ["Original: “Encontro e É de Casa”. " + SPLIT_NOTE],
+    sourceNotes: ['Original: "Encontro e É de Casa". ' + SPLIT_NOTE],
   }),
 
   project({
@@ -418,19 +418,20 @@ const projects: Project[] = [
       },
       video: {
         provider: "youtube",
-        id: "vPMti8wO-CQ",
+        id: "Xrito1jMlk4",
         status: "available",
-        checkedOn: "2026-10-21",
+        checkedOn: "2026-11-02",
       },
       externalLink: {
         url: "https://agentetransforma.org.br/projetos/yawanawa/documentario-a-forca-da-floresta/",
         label: "Ver no A Gente Transforma",
       },
     },
-    featuredOrder: 6,
+    featuredOrder: 8,
     actionLabel: "Ver projeto",
     sourceNotes: [
-      "A exibição na Semana de Design de Milão consta “conforme o briefing”.",
+      'A exibição na Semana de Design de Milão consta "conforme o briefing".',
+      "Vídeo substituído em 2026-11-02: agora é 'A Gente Transforma Yawanawá - A Força da Floresta - Coleção Luminárias'.",
     ],
   }),
 
@@ -440,6 +441,28 @@ const projects: Project[] = [
     title: "Bonitinha, Mas Ordinária",
     categories: ["cinema"],
     periodLabel: "2008/2013",
+    media: {
+      image: {
+        src: "/images/projetos/bonitinha-mas-ordinaria.jpg",
+        alt: "Trailer oficial de Bonitinha, Mas Ordinária, adaptação da obra de Nelson Rodrigues",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "F3_W8K5lnGw",
+        status: "available",
+        checkedOn: "2026-11-02",
+      },
+      externalLink: null,
+    },
+    featuredOrder: 9,
+    actionLabel: "Ver projeto",
+    sourceNotes: [
+      "Trailer oficial adicionado em 2026-11-02.",
+    ],
   }),
 
   project({
@@ -457,8 +480,8 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     periodLabel: "2012",
     sourceNotes: [
-      "Original: “Vida de Mallandro e Pequenos Notáveis”. " + SPLIT_NOTE,
-      "Grafia “Mallandro” preservada como fornecida; confirmar.",
+      'Original: "Vida de Mallandro e Pequenos Notáveis". ' + SPLIT_NOTE,
+      'Grafia "Mallandro" preservada como fornecida; confirmar.',
     ],
   }),
 
@@ -469,9 +492,8 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     periodLabel: "2012",
     sourceNotes: [
-      "Original: “Vida de Mallandro e Pequenos Notáveis”. " + SPLIT_NOTE,
-    ],
-  }),
+      'Original: "Vida de Mallandro e Pequenos Notáveis". ' + SPLIT_NOTE,
+    ],  }),
 
   project({
     id: "institucionais-lado-b",
@@ -496,7 +518,7 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     periodLabel: "2008",
     sourceNotes: [
-      "Original: “Fantástico e Campanha Fernando Gabeira”. " + SPLIT_NOTE,
+      'Original: "Fantástico e Campanha Fernando Gabeira". ' + SPLIT_NOTE,
     ],
   }),
 
@@ -507,7 +529,7 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     periodLabel: "2008",
     sourceNotes: [
-      "Original: “Fantástico e Campanha Fernando Gabeira”. " + SPLIT_NOTE,
+      'Original: "Fantástico e Campanha Fernando Gabeira". ' + SPLIT_NOTE,
     ],
   }),
 
@@ -735,7 +757,7 @@ export const portfolioData: PortfolioData = {
   featured: {
     title: "Obras selecionadas",
     support: "Cinema, televisão, streaming e projetos de palco.",
-    initialCount: 4,
+    initialCount: 9,
   },
 
   brands: {
@@ -764,7 +786,7 @@ export const portfolioData: PortfolioData = {
   biography: {
     title: "Uma trajetória construída na ilha de edição",
     paragraphs: [
-      "Trabalho com edição desde 1998, quando fiz minha primeira assistência ao lado do mestre João Paulo de Carvalho — nosso eterno “Fofinho” — no especial Prenda Minha, de Caetano Veloso. Foi com ele, trabalhando em projetos como os trailers de Orfeu e Bossa Nova e o documentário Niemeyer (Vídeo Filmes), que aprendi a delícia da nossa profissão: o entendimento de que o carinho, o respeito e o amor pelo material andam juntos na criação da história que vamos contar.",
+      'Trabalho com edição desde 1998, quando fiz minha primeira assistência ao lado do mestre João Paulo de Carvalho — nosso eterno "Fofinho" — no especial Prenda Minha, de Caetano Veloso. Foi com ele, trabalhando em projetos como os trailers de Orfeu e Bossa Nova e o documentário Niemeyer (Vídeo Filmes), que aprendi a delícia da nossa profissão: o entendimento de que o carinho, o respeito e o amor pelo material andam juntos na criação da história que vamos contar.',
       "Mais de duas décadas depois, em 2024, tive a alegria de reencontrar essa parceria editando os vídeos dos telões da histórica turnê Caetano & Bethânia. Ao longo dessa trajetória, consolidei uma carreira versátil como Editora Sênior na TV Globo (passando pelo Big Brother Brasil, Fantástico, The Voice Kids, Caldeirão, Encontro e pelo escritório da Globo Internacional em Nova York), montadora de longas-metragens para cinema (Marietta Baderna, Bonitinha, Mas Ordinária, Xuxa, Didi e Irmãos de Fé) e editora de séries e realities para plataformas como Amazon Prime Video (Caravana das Drags) e HBO Max (7 Chances Para...).",
       "Graduada em Cinema e operando em Avid Media Composer e Adobe Premiere, atuo hoje em projetos presenciais, híbridos ou remotos para produções em todo o Brasil e no exterior, contando também com estrutura de ilha de edição própria no Jardim Botânico (RJ) através da Aquarela Multimídia.",
     ],
@@ -886,14 +908,15 @@ export const portfolioData: PortfolioData = {
     linkedin: {
       url: "https://www.linkedin.com/in/leli-figueiredo-28839397/",
     },
-    // Identificador fornecido; destino e identidade ainda a confirmar (ver publicationChecklist).
-    imdb: { id: "nm1676461", approved: false },
+    // Verificado em 2026-11-02: YouTube oEmbed HTTP 200 (canal CSYS Plus/Cinesystem)
+    // e IMDb nm1676461 = "Léli Figueiredo — Editor" (Destino, Irmãos de Fé, Bruja).
+    imdb: { id: "nm1676461", approved: true },
   },
 
   seo: {
-    title: "Leli Figueiredo | Montadora, Editora Sênior e Finalizadora",
+    title: "Leli Figueiredo | Montadora, Editora e Finalizadora • RJ",
     description:
-      "Montadora, Editora Sênior e Finalizadora com mais de 25 anos de carreira e experiência em TV Globo, Globo Filmes, Amazon Prime Video, HBO Max, documentários, realities e cinema brasileiro.",
+      "Montadora, Editora Sênior e Finalizadora no Rio de Janeiro. Mais de 25 anos em TV Globo, Globo Filmes, Amazon Prime Video, HBO Max, cinema e documentários.",
     locale: "pt_BR",
     lang: "pt-BR",
     ogImageAlt: "Leli Figueiredo — Montadora, Editora Sênior e Finalizadora",
@@ -1007,8 +1030,8 @@ export const portfolioData: PortfolioData = {
       id: "trailer-imdb-verification",
       label:
         "Verificar o destino do trailer (YouTube i5uQ5QtVSGo) e do perfil IMDb nm1676461; o IMDb não pôde ser consultado automaticamente (HTTP 403).",
-      blocking: true,
-      status: "pending",
+      blocking: false,
+      status: "done",
     },
     {
       id: "reality-inedito",

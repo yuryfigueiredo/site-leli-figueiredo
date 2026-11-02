@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUpRight, Play } from "lucide-react";
+import Link from "next/link";
 import { portfolioData } from "@/data/portfolioData";
 import type { Project } from "@/data/types";
 import {
@@ -13,7 +14,6 @@ import {
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import { useProjectDialog } from "./ProjectDialogProvider";
 import { WorkArtwork } from "./WorkArtwork";
 
 const { featured, navigation, uiLabels } = portfolioData;
@@ -31,6 +31,7 @@ const SPANS = [
   "lg:col-span-5",
   "lg:col-span-5",
   "lg:col-span-7",
+  "lg:col-span-7",
 ];
 
 const SIZES = [
@@ -41,6 +42,7 @@ const SIZES = [
   "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
   "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
   "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
+  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
   "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
 ];
 
@@ -105,7 +107,6 @@ interface FeaturedCardProps {
 }
 
 function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) {
-  const { openProject } = useProjectDialog();
   const isLead = index === 0;
   const hasImage = Boolean(project.media.image);
   const playable = hasPlayableVideo(project);
@@ -125,13 +126,15 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
       )}
     >
       <div className="relative overflow-hidden border border-line">
-        <div className="transition-transform duration-500 ease-out motion-reduce:transition-none group-hover:scale-[1.02]">
-          <WorkArtwork
-            project={project}
-            sizes={SIZES[index] ?? "(min-width: 1024px) 50vw, 100vw"}
-            priority={false}
-          />
-        </div>
+        <Link href={`/obras/${project.slug}`} className="block">
+          <div className="transition-transform duration-500 ease-out motion-reduce:transition-none group-hover:scale-[1.02]">
+            <WorkArtwork
+              project={project}
+              sizes={SIZES[index] ?? "(min-width: 1024px) 50vw, 100vw"}
+              priority={false}
+            />
+          </div>
+        </Link>
         {playable ? (
           <span
             aria-hidden="true"
@@ -164,11 +167,9 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
               {project.role}
             </p>
           ) : null}
-          <button
-            type="button"
-            aria-haspopup="dialog"
-            onClick={() => openProject(project.slug)}
-            className="mt-4 inline-flex min-h-11 items-center gap-2 border-b border-amber pb-0.5 text-[0.9375rem] font-medium text-paper transition-colors after:absolute after:inset-0 after:content-[''] hover:text-amber focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-4 focus-visible:after:outline-amber"
+          <Link
+            href={`/obras/${project.slug}`}
+            className="mt-4 inline-flex min-h-11 items-center gap-2 border-b border-amber pb-0.5 text-[0.9375rem] font-medium text-paper transition-colors hover:text-amber"
           >
             {featuredActionLabel(project)}
             {playable ? (
@@ -176,7 +177,7 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
             ) : (
               <ArrowUpRight aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
             )}
-          </button>
+          </Link>
         </div>
       </div>
     </article>
