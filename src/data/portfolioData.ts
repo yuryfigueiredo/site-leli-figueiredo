@@ -215,7 +215,7 @@ const projects: Project[] = [
         checkedOn: "2026-10-21",
       },
       externalLink: {
-        url: "https://globoplay.globo.com/sem-bloqueio/t/5D69j5kP3L/",
+        url: "https://globoplay.globo.com/sem-bloqueio/t/99pGLYfjdY/",
         label: "Ver no Globoplay",
       },
     },
@@ -224,7 +224,10 @@ const projects: Project[] = [
     pendingChecks: [
       "Confirmar a plataforma/canal individual (o destaque original reunia duas obras e duas plataformas: HBO Max / Discovery).",
     ],
-    sourceNotes: [GROUPED_SERIES_NOTE],
+    sourceNotes: [
+      GROUPED_SERIES_NOTE,
+      "Endereço do Globoplay verificado em 2026-11-02: o id antigo (5D69j5kP3L) caiu e a página viva é 99pGLYfjdY.",
+    ],
   }),
 
   project({
@@ -484,27 +487,8 @@ const projects: Project[] = [
     title: "Bonitinha, Mas Ordinária",
     categories: ["cinema"],
     periodLabel: "2008/2013",
-    media: {
-      image: {
-        src: "/images/projetos/bonitinha-mas-ordinaria.jpg",
-        alt: "Trailer oficial de Bonitinha, Mas Ordinária, adaptação da obra de Nelson Rodrigues",
-        width: 1280,
-        height: 720,
-        kind: "frame",
-        focalPoint: "50% 50%",
-      },
-      video: {
-        provider: "youtube",
-        id: "F3_W8K5lnGw",
-        status: "available",
-        checkedOn: "2026-11-02",
-      },
-      externalLink: null,
-    },
-    featuredOrder: 10,
-    actionLabel: "Ver projeto",
     sourceNotes: [
-      "Trailer oficial adicionado em 2026-11-02.",
+      "Crédito de catálogo: o briefing lista o título em Cinema & Longas, sem fornecer mídia nem destaque para esta obra.",
     ],
   }),
 
@@ -689,7 +673,7 @@ const projects: Project[] = [
     title: "Pantaneiros",
     categories: ["documentarios"],
     periodLabel: "2001",
-    description: "Direção de José Padilha.",
+    associatedCredit: "Direção de José Padilha.",
   }),
 
   project({
@@ -800,7 +784,7 @@ export const portfolioData: PortfolioData = {
   featured: {
     title: "Obras selecionadas",
     support: "Cinema, televisão, streaming e projetos de palco.",
-    initialCount: 10,
+    initialCount: 9,
   },
 
   brands: {
