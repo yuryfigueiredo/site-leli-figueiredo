@@ -75,6 +75,41 @@ const projects: Project[] = [
   }),
 
   project({
+    id: "casa-do-patrao",
+    slug: "casa-do-patrao",
+    title: "Casa do Patrão",
+    categories: ["tv-streaming"],
+    presentationCategory: "Reality Shows",
+    periodLabel: "2026",
+    role: "Editora",
+    description:
+      "Reality show de confinamento da Record TV e Disney+, criado por Boninho.",
+    organizations: ["Record TV", "Disney+"],
+    media: {
+      image: {
+        src: "/images/projetos/casa-do-patrao.jpg",
+        alt: "Cena do reality show Casa do Patrão",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "RLH0Qn5v8yo",
+        status: "available",
+        checkedOn: "2026-11-02",
+      },
+      externalLink: null,
+    },
+    featuredOrder: 1,
+    actionLabel: "Ver projeto",
+    sourceNotes: [
+      "Estreia em 27 de abril de 2026, na Record TV e no Disney+ (verificado em 2026-11-02).",
+    ],
+  }),
+
+  project({
     id: "marietta-baderna",
     slug: "marietta-baderna-dos-palcos-ao-dicionario",
     title: "Marietta Baderna: Dos Palcos ao Dicionário",
@@ -101,7 +136,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 1,
+    featuredOrder: 2,
     actionLabel: "Ver projeto",
     withheldClaims: [
       {
@@ -146,7 +181,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 2,
+    featuredOrder: 3,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "A conexão com Prenda Minha é desenvolvida na biografia, sem repetir a narrativa aqui.",
@@ -184,7 +219,7 @@ const projects: Project[] = [
         label: "Ver no Globoplay",
       },
     },
-    featuredOrder: 3,
+    featuredOrder: 4,
     actionLabel: "Ver projeto",
     pendingChecks: [
       "Confirmar a plataforma/canal individual (o destaque original reunia duas obras e duas plataformas: HBO Max / Discovery).",
@@ -218,7 +253,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 4,
+    featuredOrder: 5,
     actionLabel: "Ver projeto",
   }),
 
@@ -264,7 +299,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 5,
+    featuredOrder: 6,
     actionLabel: "Ver projeto",
   }),
 
@@ -294,7 +329,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 6,
+    featuredOrder: 7,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "Associação a HBO Max vem da biografia (individual). O bloco original associava a obra e Sem Bloqueio a HBO Max / Discovery em conjunto.",
@@ -361,42 +396,12 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 7,
+    featuredOrder: 8,
     actionLabel: "Ver créditos",
     sourceNotes: [
       "Não informar intervalo de anos: apenas as edições foram fornecidas.",
       "Posição no catálogo: ordem editorial fixa, por não haver ano informado.",
     ],
-  }),
-
-  project({
-    id: "casa-do-patrao",
-    slug: "casa-do-patrao",
-    title: "Casa do Patrão",
-    categories: ["tv-streaming"],
-    presentationCategory: "Reality Shows",
-    periodLabel: "Projeto Recente",
-    role: "Editora",
-    description: "Reality show.",
-    media: {
-      image: {
-        src: "/images/projetos/casa-do-patrao.jpg",
-        alt: "Cena do reality show Casa do Patrão",
-        width: 1280,
-        height: 720,
-        kind: "frame",
-        focalPoint: "50% 50%",
-      },
-      video: {
-        provider: "youtube",
-        id: "RLH0Qn5v8yo",
-        status: "available",
-        checkedOn: "2026-11-02",
-      },
-      externalLink: null,
-    },
-    featuredOrder: 8,
-    actionLabel: "Ver projeto",
   }),
 
   project({
