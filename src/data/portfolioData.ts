@@ -370,6 +370,36 @@ const projects: Project[] = [
   }),
 
   project({
+    id: "casa-do-patrao",
+    slug: "casa-do-patrao",
+    title: "Casa do Patrão",
+    categories: ["tv-streaming"],
+    presentationCategory: "Reality Shows",
+    periodLabel: "Projeto Recente",
+    role: "Editora",
+    description: "Reality show.",
+    media: {
+      image: {
+        src: "/images/projetos/casa-do-patrao.jpg",
+        alt: "Cena do reality show Casa do Patrão",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "RLH0Qn5v8yo",
+        status: "available",
+        checkedOn: "2026-11-02",
+      },
+      externalLink: null,
+    },
+    featuredOrder: 8,
+    actionLabel: "Ver projeto",
+  }),
+
+  project({
     id: "encontro",
     slug: "encontro",
     title: "Encontro",
@@ -411,8 +441,8 @@ const projects: Project[] = [
       image: {
         src: "/images/projetos/a-forca-da-floresta.jpg",
         alt: "Frame oficial do documentário A Força da Floresta — Povo Yawanawá",
-        width: 1280,
-        height: 720,
+        width: 640,
+        height: 480,
         kind: "frame",
         focalPoint: "50% 50%",
       },
@@ -427,7 +457,7 @@ const projects: Project[] = [
         label: "Ver no A Gente Transforma",
       },
     },
-    featuredOrder: 8,
+    featuredOrder: 9,
     actionLabel: "Ver projeto",
     sourceNotes: [
       'A exibição na Semana de Design de Milão consta "conforme o briefing".',
@@ -458,7 +488,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 9,
+    featuredOrder: 10,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "Trailer oficial adicionado em 2026-11-02.",
@@ -757,7 +787,7 @@ export const portfolioData: PortfolioData = {
   featured: {
     title: "Obras selecionadas",
     support: "Cinema, televisão, streaming e projetos de palco.",
-    initialCount: 9,
+    initialCount: 10,
   },
 
   brands: {
