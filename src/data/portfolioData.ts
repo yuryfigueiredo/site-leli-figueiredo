@@ -453,7 +453,7 @@ const projects: Project[] = [
       },
       video: {
         provider: "youtube",
-        id: "orVTptPTpM8",
+        id: "Xrito1jMlk4",
         status: "available",
         checkedOn: "2026-11-02",
       },
@@ -466,7 +466,8 @@ const projects: Project[] = [
     actionLabel: "Ver projeto",
     sourceNotes: [
       'A exibição na Semana de Design de Milão consta "conforme o briefing".',
-      "Vídeo em 2026-11-02: trailer oficial 'A FORÇA DA FLORESTA', no canal da própria Leli Figueiredo (1080p).",
+      "Link de assistir enviado pela Leli: filme completo (53min), hospedado no canal do Museu A CASA; resolução de origem é 480p.",
+      "A imagem da vitrine vem de outra fonte: frame do trailer oficial em 1080p (orVTptPTpM8), no canal da própria Leli, escolhida porque o vídeo linkado não produz um still nítido.",
     ],
   }),
 
