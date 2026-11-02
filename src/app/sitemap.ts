@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { isPreview, siteUrl } from "@/lib/site";
-import { publicProjects } from "@/lib/projects";
+import { dossierProjects } from "@/lib/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Só publica entradas com o domínio real e fora do modo prévia.
   if (!siteUrl || isPreview) return [];
 
-  const obras = publicProjects.map((project) => ({
+  const obras = dossierProjects.map((project) => ({
     url: `${siteUrl}/obras/${project.slug}`,
     lastModified: new Date(),
     changeFrequency: "yearly" as const,

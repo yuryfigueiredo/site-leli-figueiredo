@@ -7,7 +7,7 @@ import { portfolioData } from "@/data/portfolioData";
 import type { CategoryId, Project } from "@/data/types";
 import {
   categoryLabels,
-  hasDossier,
+  dossierSlugs,
   matchesFilter,
   matchesQuery,
   publicProjects,
@@ -180,7 +180,7 @@ export function Filmography() {
 }
 
 function CreditRow({ project }: { project: Project }) {
-  const dossier = hasDossier(project);
+  const dossier = dossierSlugs.has(project.slug);
 
   const credits = [
     project.role,

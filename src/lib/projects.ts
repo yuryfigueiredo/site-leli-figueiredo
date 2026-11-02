@@ -37,15 +37,13 @@ export function featuredActionLabel(project: Project): string {
   return project.actionLabel ?? uiLabels.actions.viewProject;
 }
 
-/** Um registro só tem ficha se houver informação além do que a linha do catálogo já exibe. */
-export function hasDossier(project: Project): boolean {
-  return (
-    project.featuredOrder !== null ||
-    Boolean(project.description) ||
-    hasPlayableVideo(project) ||
-    Boolean(project.media.externalLink)
-  );
-}
+/**
+ * Fichas que existem são exatamente os destaques da página principal, na mesma ordem:
+ * a rota /obras/[slug], a navegação entre obras e o sitemap seguem esta lista.
+ */
+export const dossierProjects: Project[] = featuredProjects;
+
+export const dossierSlugs: Set<string> = new Set(dossierProjects.map((project) => project.slug));
 
 export function matchesFilter(
   project: Project,

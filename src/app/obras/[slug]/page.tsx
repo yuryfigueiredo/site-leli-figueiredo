@@ -5,9 +5,9 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 import {
   categoryLabels,
+  dossierProjects,
   getProjectBySlug,
   hasPlayableVideo,
-  publicProjects,
   youtubeEmbedUrl,
   youtubeWatchUrl,
 } from "@/lib/projects";
@@ -21,7 +21,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return publicProjects.map((project) => ({ slug: project.slug }));
+  return dossierProjects.map((project) => ({ slug: project.slug }));
 }
 
 export const dynamicParams = false;
@@ -73,9 +73,12 @@ export default async function Page({ params }: PageProps) {
   if (!project) notFound();
 
   const base = siteUrl ?? "http://localhost:3000";
-  const currentIndex = publicProjects.findIndex((p) => p.slug === slug);
-  const prev = currentIndex > 0 ? publicProjects[currentIndex - 1] : null;
-  const next = currentIndex < publicProjects.length - 1 ? publicProjects[currentIndex + 1] : null;
+  const currentIndex = dossierProjects.findIndex((p) => p.slug === slug);
+  const prev = currentIndex > 0 ? dossierProjects[currentIndex - 1] : null;
+  const next =
+    currentIndex >= 0 && currentIndex < dossierProjects.length - 1
+      ? dossierProjects[currentIndex + 1]
+      : null;
 
   const caption = [
     project.presentationCategory ?? categoryLabels(project).join(" • "),
@@ -189,30 +192,34 @@ export default async function Page({ params }: PageProps) {
               </dl>
             ) : null}
 
-            {project.media.externalLink ? (
-              <a
-                href={project.media.externalLink.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-text mt-8 inline-flex min-h-11 items-center gap-2"
-              >
-                {project.media.externalLink.label}
-                <ExternalLink aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
-                <span className="sr-only">{uiLabels.externalLinkHint}</span>
-              </a>
-            ) : null}
+            {project.media.externalLink || video ? (
+              <div className="mt-8 flex flex-col items-start gap-4">
+                {project.media.externalLink ? (
+                  <a
+                    href={project.media.externalLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-text inline-flex min-h-11 items-center gap-2"
+                  >
+                    {project.media.externalLink.label}
+                    <ExternalLink aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
+                    <span className="sr-only">{uiLabels.externalLinkHint}</span>
+                  </a>
+                ) : null}
 
-            {video ? (
-              <a
-                href={youtubeWatchUrl(video.id)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-text mt-6 inline-flex min-h-11 items-center gap-2"
-              >
-                {uiLabels.actions.watchOnYoutube}
-                <ExternalLink aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
-                <span className="sr-only">{uiLabels.externalLinkHint}</span>
-              </a>
+                {video ? (
+                  <a
+                    href={youtubeWatchUrl(video.id)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-text inline-flex min-h-11 items-center gap-2"
+                  >
+                    {uiLabels.actions.watchOnYoutube}
+                    <ExternalLink aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
+                    <span className="sr-only">{uiLabels.externalLinkHint}</span>
+                  </a>
+                ) : null}
+              </div>
             ) : null}
           </div>
         </div>

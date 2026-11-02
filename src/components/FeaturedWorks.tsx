@@ -31,8 +31,7 @@ const SPANS = [
   "lg:col-span-5",
   "lg:col-span-5",
   "lg:col-span-7",
-  "lg:col-span-7",
-  "lg:col-span-5",
+  "lg:col-span-12",
 ];
 
 const SIZES = [
@@ -44,8 +43,7 @@ const SIZES = [
   "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
   "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
   "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
+  "(min-width: 1320px) 1160px, 100vw",
 ];
 
 export function FeaturedWorks() {
