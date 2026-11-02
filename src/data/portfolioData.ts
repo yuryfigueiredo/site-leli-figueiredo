@@ -487,8 +487,27 @@ const projects: Project[] = [
     title: "Bonitinha, Mas Ordinária",
     categories: ["cinema"],
     periodLabel: "2008/2013",
+    media: {
+      image: {
+        src: "/images/projetos/bonitinha-mas-ordinaria.jpg",
+        alt: "Trailer oficial de Bonitinha, Mas Ordinária, adaptação da obra de Nelson Rodrigues",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "F3_W8K5lnGw",
+        status: "available",
+        checkedOn: "2026-11-02",
+      },
+      externalLink: null,
+    },
+    featuredOrder: 10,
+    actionLabel: "Ver projeto",
     sourceNotes: [
-      "Crédito de catálogo: o briefing lista o título em Cinema & Longas, sem fornecer mídia nem destaque para esta obra.",
+      "Trailer oficial adicionado em 2026-11-02 e mantido como destaque por escolha do cliente.",
     ],
   }),
 
@@ -784,7 +803,7 @@ export const portfolioData: PortfolioData = {
   featured: {
     title: "Obras selecionadas",
     support: "Cinema, televisão, streaming e projetos de palco.",
-    initialCount: 9,
+    initialCount: 10,
   },
 
   brands: {
