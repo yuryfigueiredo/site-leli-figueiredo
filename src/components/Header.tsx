@@ -112,9 +112,17 @@ export function Header() {
     >
       <div className="shell flex h-full items-center justify-between gap-6">
         <Link
-          href={isHomePage ? "#topo" : "/#topo"}
+          href="/"
           aria-label={uiLabels.headerHomeLabel}
           className="flex min-h-11 items-center leading-tight"
+          onClick={(e) => {
+            // Se já estiver na home, rola para o topo em vez de só mudar o hash.
+            if (isHomePage) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.history.replaceState(null, "", "/");
+            }
+          }}
         >
           <span className="font-serif text-[1.375rem] tracking-wide text-paper">
             {identity.displayName}
