@@ -38,8 +38,8 @@ export function featuredActionLabel(project: Project): string {
 }
 
 /**
- * Fichas que existem são exatamente os destaques da página principal, na mesma ordem:
- * a rota /obras/[slug], a navegação entre obras e o sitemap seguem esta lista.
+ * Dossiers are exactly the featured works shown on the home page, in the same order:
+ * the /obras/[slug] route, the prev/next chain and the sitemap all follow this list.
  */
 export const dossierProjects: Project[] = featuredProjects;
 

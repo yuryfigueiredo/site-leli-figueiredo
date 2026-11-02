@@ -43,7 +43,7 @@ export function Footer() {
         <a
           href="#topo"
           onClick={(event) => {
-            // Sem JS a âncora cuida do resto; com JS, rola sempre — inclusive no segundo clique.
+            // Without JS the anchor still resolves; with JS always scroll, including repeat clicks.
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
             window.history.replaceState(null, "", window.location.pathname);
