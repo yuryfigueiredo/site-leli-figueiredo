@@ -49,13 +49,11 @@ export function FeaturedWorks() {
     >
       <div className="shell">
         <Reveal>
-          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-baseline">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading id="obras-titulo" eyebrow={eyebrow} title={featured.title} />
-            <p className="max-w-md text-fluid-lead text-mute lg:max-w-[34rem]">
+            <p className="max-w-md text-fluid-lead text-mute">
               {fillTemplate(featured.support, {
-                // O número descreve o que está na tela, não a lista inteira: obras além de
-                // `initialCount` só aparecem depois de expandir.
-                destaques: Math.min(featured.initialCount, featuredProjects.length),
+                destaques: featuredProjects.length,
                 creditos: publicProjects.length,
               })}
             </p>
