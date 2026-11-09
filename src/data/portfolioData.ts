@@ -267,14 +267,14 @@ const projects: Project[] = [
   project({
     id: "abre-coxia",
     slug: "abre-coxia",
-    title: "Abre Coxia",
+    title: "Abre a Coxia",
     categories: ["documentarios"],
     periodLabel: "2023",
     role: "Editora",
     description:
       "Série de bastidores do teatro brasileiro, dirigida por Liz Reis, exibida no Canal Arte1.",
     organizations: ["Canal Arte1"],
-    featuredOrder: 16,
+    featuredOrder: 6,
     media: {
       image: {
         src: "https://img.youtube.com/vi/otdwXqZQIYE/maxresdefault.jpg",
@@ -293,7 +293,7 @@ const projects: Project[] = [
       externalLink: null,
     },
     sourceNotes: [
-      'Título fornecido no briefing como "Abre Coxia"; o material oficial do Canal Arte1 grafa "Abre a Coxia". Confirmar a grafia com a contratante.',
+      'Grafia confirmada pela contratante em 2026-11-09 e pelo título oficial do vídeo no canal Arte1: "Abre a Coxia". O slug permanece abre-coxia porque a URL já foi publicada no sitemap.',
     ],
   }),
 
@@ -304,7 +304,7 @@ const projects: Project[] = [
     categories: ["shows"],
     periodLabel: "2023",
     role: "Editora",
-    featuredOrder: 11,
+    featuredOrder: 7,
     media: {
       image: {
         src: "https://i.scdn.co/image/ab6765630000ba8a266fa5cf60b1011620463ab9",
@@ -348,7 +348,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 6,
+    featuredOrder: 8,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "A imagem é um frame do próprio trailer vinculado (p6gZkT7PI5U), sem o letreiro de divulgação que estava antes.",
@@ -381,7 +381,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 7,
+    featuredOrder: 9,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "Associação a HBO Max vem da biografia (individual). O bloco original associava a obra e Sem Bloqueio a HBO Max / Discovery em conjunto.",
@@ -486,7 +486,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 8,
+    featuredOrder: 10,
     actionLabel: "Ver créditos",
     sourceNotes: [
       "Não informar intervalo de anos: apenas as edições foram fornecidas.",
@@ -572,7 +572,7 @@ const projects: Project[] = [
         label: "Ver no A Gente Transforma",
       },
     },
-    featuredOrder: 9,
+    featuredOrder: 11,
     actionLabel: "Ver projeto",
     sourceNotes: [
       'A exibição na Semana de Design de Milão consta "conforme o briefing".',
@@ -605,7 +605,7 @@ const projects: Project[] = [
       },
       externalLink: null,
     },
-    featuredOrder: 10,
+    featuredOrder: 12,
     actionLabel: "Ver projeto",
     sourceNotes: [
       "Trailer oficial adicionado em 2026-11-02 e mantido como destaque por escolha do cliente.",
@@ -750,7 +750,7 @@ const projects: Project[] = [
     categories: ["documentarios"],
     periodLabel: "2004",
     role: "Editora",
-    featuredOrder: 12,
+    featuredOrder: 13,
     media: {
       image: {
         src: "https://img.youtube.com/vi/z_p1MnqFYUc/sddefault.jpg",
@@ -777,7 +777,7 @@ const projects: Project[] = [
     categories: ["cinema"],
     periodLabel: "2004",
     role: "Editora",
-    featuredOrder: 13,
+    featuredOrder: 14,
     media: {
       image: {
         src: "https://img.youtube.com/vi/4BkY6MOGnB4/maxresdefault.jpg",
@@ -804,7 +804,7 @@ const projects: Project[] = [
     categories: ["cinema"],
     periodLabel: "2004",
     role: "Editora",
-    featuredOrder: 14,
+    featuredOrder: 15,
     media: {
       image: {
         src: "https://img.youtube.com/vi/Lf_jq6EjJHU/sddefault.jpg",
@@ -831,7 +831,7 @@ const projects: Project[] = [
     categories: ["cinema"],
     periodLabel: "2004",
     role: "Editora",
-    featuredOrder: 15,
+    featuredOrder: 16,
     media: {
       image: {
         src: "https://img.youtube.com/vi/lbhPXV8RMZs/maxresdefault.jpg",
@@ -1326,9 +1326,16 @@ export const portfolioData: PortfolioData = {
     {
       id: "abre-coxia-grafia",
       label:
-        'Grafia do título: briefing diz "Abre Coxia"; o material oficial do Canal Arte1 grafa "Abre a Coxia".',
+        'Grafia do título resolvida em 2026-11-09: "Abre a Coxia", conforme o título oficial do vídeo no Canal Arte1 (oEmbed consultado em 2026-11-09) e a confirmação da contratante.',
       blocking: false,
-      status: "pending",
+      status: "done",
+    },
+    {
+      id: "featured-order-chronology",
+      label:
+        "Vitrine renumerada em 2026-11-09 para seguir a mesma regra do catálogo (mais recente → mais antigo): Abre a Coxia e Podcast O Caso, de 2023, estavam nas posições 16 e 11, depois dos longas de 2004. Big Brother Brasil permanece na posição 10 por não ter ano no rótulo.",
+      blocking: false,
+      status: "done",
     },
   ],
 };

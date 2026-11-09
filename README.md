@@ -90,10 +90,13 @@ Cada obra é **um único registro** em `projects`, usado pela vitrine **e** pela
 - `categories`: uma ou mais categorias (`"tv-streaming" | "cinema" | "documentarios" | "shows" | "raizes"`).
 - `periodLabel`: o período **como informado**. Não troque pela data de lançamento.
 - `role`, `description`, `organizations`: só informações daquela obra; `null`/`[]` some da interface.
-- `featuredOrder`: posição de 1 a 8 na vitrine (`null` = só no catálogo). As 4 primeiras aparecem logo de início.
+- `featuredOrder`: posição na vitrine (hoje 1 a 16; `null` = só no catálogo). As 4 primeiras aparecem logo de início.
 - `publicationStatus: "on-hold"` mantém o registro na base sem publicar.
 - `pendingChecks`, `withheldClaims`, `sourceNotes`: anotações internas, **nunca exibidas**.
 - A ordem da lista é a ordem do catálogo (mais recente → mais antigo; itens sem ano têm posição fixa).
+  A vitrine segue a **mesma** regra: `featuredOrder` é sempre um renúmero cronológico do catálogo, nunca
+  acréscimo no fim — quem define a posição na vitrine é o ano, não a data em que a obra entrou no site.
+  O mesmo ordem comanda as páginas `/obras/[slug]` (corrente anterior/próxima) e o `sitemap.xml`.
 
 ### Imagens
 
@@ -175,7 +178,7 @@ testes em dispositivos reais, Safari/iOS, Firefox ou com leitores de tela.
 | 9 | Plataforma individual de *Sem Bloqueio* (e confirmar HBO Max em *7 Chances Para...*) | Não |
 | 10 | Vínculo com a Aquarela Multimídia para `worksFor` no JSON-LD | Não — resolvida |
 | 11 | Verbos da biografia ("montadora de longas-metragens para cinema") vs. o crédito único "Editora" dos cards | Não |
-| 12 | Grafia de *Abre Coxia* (briefing) vs. "Abre a Coxia" (material oficial do Canal Arte1) | Não |
+| 12 | Grafia de *Abre Coxia* vs. "Abre a Coxia" (Canal Arte1) | Não — resolvida: **Abre a Coxia** (título oficial do vídeo) |
 
 Itens 1, 2 e 3 eram os bloqueantes do `publicationChecklist`; com eles resolvidos e o domínio
 configurado, o site saiu do `noindex` e passou a anunciar `sitemap.xml`.
