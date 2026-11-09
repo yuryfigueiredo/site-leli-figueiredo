@@ -114,12 +114,18 @@ export default async function Page({ params }: PageProps) {
   ];
 
   if (video) {
+    // O thumbnail precisa ser do vídeo embutido. A imagem da obra só serve quando
+    // é miniatura daquele mesmo ID; hqdefault existe para qualquer vídeo.
+    const thumbnailUrl = project.media.image?.src.includes(`/vi/${video.id}/`)
+      ? project.media.image.src
+      : `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+
     jsonLd.push({
       "@context": "https://schema.org",
       "@type": "VideoObject",
       name: project.title,
-      description: project.description,
-      thumbnailUrl: `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
+      description: project.description ?? `${project.title} (${project.periodLabel})`,
+      thumbnailUrl,
       contentUrl: youtubeWatchUrl(video.id),
       embedUrl: youtubeEmbedUrl(video.id),
     });
