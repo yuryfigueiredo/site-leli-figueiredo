@@ -3,7 +3,8 @@
 Site institucional de Leli Figueiredo (Montadora, Editora Sênior e Finalizadora).
 Next.js (App Router) · TypeScript · Tailwind CSS · Framer Motion · Lucide React.
 
-> **Status: PRÉVIA — não está pronto para lançamento.** Veja [Bloqueios de publicação](#bloqueios-de-publicação).
+> **Status: PUBLICADO em [https://www.lelifigueiredo.com.br](https://www.lelifigueiredo.com.br) (2026-11-09).**
+> Os itens não bloqueantes restantes estão em [Pendências](#5-pendências).
 
 ---
 
@@ -28,6 +29,25 @@ npm run build && npm start   # versão de produção
 
 Copie `.env.example` para `.env.local` e preencha `NEXT_PUBLIC_SITE_URL` **somente com o domínio oficial**.
 Sem esse valor, o site não gera canonical nem sitemap e fica com `noindex`.
+
+Em produção o valor está gravado na Vercel (Settings → Environment Variables, **Production** apenas — as
+pré-visualidades ficam sem `NEXT_PUBLIC_SITE_URL` e continuam com `noindex`):
+
+```bash
+npx vercel env add NEXT_PUBLIC_SITE_URL --environment production \
+  --value "https://www.lelifigueiredo.com.br" --yes
+```
+
+O domínio é da Leli, registrado na Registro.br com nameservers `d/e.sec.dns.br` e registro A
+`76.76.21.21` (Vercel). Está anexado ao projeto assim:
+
+```bash
+npx vercel domains add www.lelifigueiredo.com.br site-leli-figueiredo
+npx vercel domains add lelifigueiredo.com.br site-leli-figueiredo \
+  --redirect www.lelifigueiredo.com.br --redirect-status-code 308
+```
+
+Ou seja: `www.` é a URL canônica e o ápice redireciona em 308 para ele.
 
 ---
 
@@ -144,16 +164,21 @@ testes em dispositivos reais, Safari/iOS, Firefox ou com leitores de tela.
 
 | # | Pendência | Bloqueia lançamento? |
 |---|---|---|
-| 1 | WhatsApp ou outro canal real de contato | **Sim** |
-| 2 | Domínio oficial (`NEXT_PUBLIC_SITE_URL`) | **Sim** |
-| 3 | Conferir destino do trailer (YouTube `i5uQ5QtVSGo`, publicado no canal da Cinesystem) e do perfil IMDb `nm1676461` | **Sim** |
+| 1 | WhatsApp ou outro canal real de contato | **Sim** — resolvida (`5521968297772`) |
+| 2 | Domínio oficial (`NEXT_PUBLIC_SITE_URL`) | **Sim** — resolvido (`https://www.lelifigueiredo.com.br`) |
+| 3 | Conferir destino do trailer (YouTube `i5uQ5QtVSGo`, publicado no canal da Cinesystem) e do perfil IMDb `nm1676461` | **Sim** — resolvida |
 | 4 | Retrato e imagens aprovadas das obras | Não (há fallback) |
-| 5 | URL do LinkedIn | Não |
-| 6 | URL de *A Força da Floresta* em A Gente Transforma | Não |
+| 5 | URL do LinkedIn | Não — resolvida |
+| 6 | URL de *A Força da Floresta* em A Gente Transforma | Não — resolvida |
 | 7 | Confirmar "Selecionado ao Prêmio Grande Otelo" (guardado, não exibido) | Não |
 | 8 | Autorização e forma de crédito do *Reality Show Inédito* (não exibido) | Não |
 | 9 | Plataforma individual de *Sem Bloqueio* (e confirmar HBO Max em *7 Chances Para...*) | Não |
-| 10 | Vínculo com a Aquarela Multimídia para `worksFor` no JSON-LD | Não |
+| 10 | Vínculo com a Aquarela Multimídia para `worksFor` no JSON-LD | Não — resolvida |
+| 11 | Verbos da biografia ("montadora de longas-metragens para cinema") vs. o crédito único "Editora" dos cards | Não |
+| 12 | Grafia de *Abre Coxia* (briefing) vs. "Abre a Coxia" (material oficial do Canal Arte1) | Não |
+
+Itens 1, 2 e 3 eram os bloqueantes do `publicationChecklist`; com eles resolvidos e o domínio
+configurado, o site saiu do `noindex` e passou a anunciar `sitemap.xml`.
 
 ### Ambiguidades registradas (sem correção silenciosa)
 

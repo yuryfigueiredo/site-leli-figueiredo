@@ -1251,9 +1251,9 @@ export const portfolioData: PortfolioData = {
     {
       id: "domain",
       label:
-        "Informar o domínio oficial (NEXT_PUBLIC_SITE_URL) para canonical, sitemap e Open Graph na publicação final.",
+        "Domínio oficial informado pela contratante em 2026-11-09: https://www.lelifigueiredo.com.br (registrado por ela na Registro.br, apontando para a Vercel). Configurado em NEXT_PUBLIC_SITE_URL na Production; ativa canonical, sitemap, Open Graph e a saída do noindex.",
       blocking: false,
-      status: "pending",
+      status: "done",
     },
     {
       id: "portrait-images",
