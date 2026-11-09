@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowDown, ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight, Play } from "lucide-react";
 import Link from "next/link";
 import { portfolioData } from "@/data/portfolioData";
 import type { Project } from "@/data/types";
@@ -10,15 +10,13 @@ import {
   featuredActionLabel,
   featuredProjects,
   hasPlayableVideo,
-  publicProjects,
 } from "@/lib/projects";
-import { cn, fillTemplate } from "@/lib/utils";
-import { ButtonLink } from "./ButtonLink";
+import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { WorkArtwork } from "./WorkArtwork";
 
-const { featured, navigation, uiLabels } = portfolioData;
+const { featured, uiLabels } = portfolioData;
 
 /**
  * Composição editorial assimétrica: o ciclo alterna a largura entre as colunas
@@ -37,7 +35,7 @@ const SIZES = SPANS.map((span) =>
 
 export function FeaturedWorks() {
   const [expanded, setExpanded] = useState(false);
-  const eyebrow = navigation.items.find((item) => item.id === "obras")?.label ?? "";
+  const eyebrow = "Obras selecionadas";
   const extras = featuredProjects.slice(featured.initialCount);
   const extraIds = extras.map((project) => `destaque-${project.slug}`).join(" ");
 
@@ -51,12 +49,7 @@ export function FeaturedWorks() {
         <Reveal>
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeading id="obras-titulo" eyebrow={eyebrow} title={featured.title} />
-            <p className="max-w-md text-fluid-lead text-mute">
-              {fillTemplate(featured.support, {
-                destaques: featuredProjects.length,
-                creditos: publicProjects.length,
-              })}
-            </p>
+            <p className="max-w-sm text-fluid-lead text-mute">{featured.support}</p>
           </div>
         </Reveal>
 
@@ -76,7 +69,7 @@ export function FeaturedWorks() {
         </div>
 
         {extras.length > 0 ? (
-          <div className="mt-14 flex justify-center">
+          <div className="mt-14 flex justify-center border-t border-line pt-10">
             <button
               type="button"
               aria-expanded={expanded}
@@ -88,13 +81,6 @@ export function FeaturedWorks() {
             </button>
           </div>
         ) : null}
-
-        <div className="mt-14 flex justify-center border-t border-line pt-10">
-          <ButtonLink href="#filmografia" variant="ghost">
-            {uiLabels.actions.viewFilmography}
-            <ArrowDown aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
-          </ButtonLink>
-        </div>
       </div>
     </section>
   );

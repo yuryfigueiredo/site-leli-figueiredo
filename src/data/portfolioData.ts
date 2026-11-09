@@ -1011,9 +1011,7 @@ export const portfolioData: PortfolioData = {
 
   featured: {
     title: "Obras selecionadas",
-    // {destaques} e {creditos} são preenchidos em tempo de render: nunca escreva os números à mão.
-    support:
-      "Estas {destaques} obras são um recorte da trajetória: cinema, televisão, streaming e projetos de palco. Na filmografia estão os {creditos} créditos, desde 1998.",
+    support: "Cinema, televisão, streaming e projetos de palco.",
     initialCount: 16,
   },
 
@@ -1198,7 +1196,6 @@ export const portfolioData: PortfolioData = {
       viewCredits: "Ver créditos",
       moreFeatured: "Ver mais obras selecionadas",
       lessFeatured: "Mostrar menos obras",
-      viewFilmography: "Ver a filmografia",
       moreCredits: "Ver mais créditos",
       close: "Fechar",
       watchOnYoutube: "Abrir no YouTube",

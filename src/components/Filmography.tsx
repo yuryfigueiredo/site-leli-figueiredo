@@ -16,7 +16,7 @@ import { cn, fillTemplate } from "@/lib/utils";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
-const { filmography, navigation, uiLabels } = portfolioData;
+const { filmography, uiLabels } = portfolioData;
 
 type Filter = "all" | CategoryId;
 
@@ -24,7 +24,7 @@ export function Filmography() {
   const [filter, setFilter] = useState<Filter>("all");
   const [query, setQuery] = useState("");
   const [visible, setVisible] = useState(filmography.initialCount);
-  const eyebrow = navigation.items.find((item) => item.id === "filmografia")?.label ?? "";
+  const eyebrow = "Filmografia completa";
 
   const results = useMemo(
     () =>
@@ -54,8 +54,7 @@ export function Filmography() {
     <section
       id="filmografia"
       aria-labelledby="filmografia-titulo"
-      tabIndex={-1}
-      className="section-pad border-t border-line outline-none"
+      className="section-pad border-t border-line"
     >
       <div className="shell">
         <Reveal>
