@@ -19,19 +19,22 @@ const FOCUSABLE = 'a[href], button:not([disabled])';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [sectionId, setSectionId] = useState<string | null>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  // Fora da home não há seções em vista: o destaque é derivado, não sincronizado por efeito.
+  const activeId = isHomePage ? sectionId : null;
 
   const closeMenu = useCallback((restoreFocus: boolean) => {
     setMenuOpen(false);
     if (restoreFocus) menuButtonRef.current?.focus();
   }, []);
 
-  // Destaque da seção atual (scroll spy discreto).
+  // Destaque da seção atual (scroll spy discreto), só na home.
   useEffect(() => {
+    if (!isHomePage) return;
     const targets = navigation.items
       .map((item) => document.getElementById(item.id))
       .filter((el): el is HTMLElement => el !== null);
@@ -39,19 +42,14 @@ export function Header() {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) setActiveId(entry.target.id);
+          if (entry.isIntersecting) setSectionId(entry.target.id);
         }
       },
       { rootMargin: "-35% 0px -60% 0px" },
     );
     targets.forEach((target) => observer.observe(target));
     return () => observer.disconnect();
-  }, []);
-
-  // Em rotas que não são a home, nenhuma seção está em vista — limpa o destaque.
-  useEffect(() => {
-    if (pathname !== "/") setActiveId(null);
-  }, [pathname]);
+  }, [isHomePage]);
 
   // Menu e modal não podem ficar ativos ao mesmo tempo; menu fecha ao ampliar a tela.
   useEffect(() => {
