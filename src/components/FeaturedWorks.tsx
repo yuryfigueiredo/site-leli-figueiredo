@@ -19,13 +19,18 @@ import { WorkArtwork } from "./WorkArtwork";
 const { featured, uiLabels } = portfolioData;
 
 /**
- * Grid equilibrado: colunas iguais (6+6) em telas largas.
+ * Composição editorial assimétrica: o ciclo alterna a largura entre as colunas
+ * esquerda e direita a cada linha, sem deixar card órfão no fim.
+ * Strings literais — o Tailwind só gera a classe se ela aparecer inteira aqui.
  * (a ordem segue `featuredOrder`; no celular tudo vira uma coluna.)
  */
-const SPANS = Array(15).fill("lg:col-span-6");
+const SPAN_CYCLE = ["lg:col-span-7", "lg:col-span-5", "lg:col-span-5", "lg:col-span-7"];
+const SPANS = featuredProjects.map((_, i) => SPAN_CYCLE[i % SPAN_CYCLE.length]);
 
-const SIZES = Array(15).fill(
-  "(min-width: 1320px) 600px, (min-width: 1024px) 50vw, 100vw",
+const SIZES = SPANS.map((span) =>
+  span.endsWith("7")
+    ? "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw"
+    : "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
 );
 
 export function FeaturedWorks() {
@@ -96,7 +101,6 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
     .filter(Boolean)
     .join(" • ");
   const order = String(project.featuredOrder ?? index + 1).padStart(2, "0");
-  const isLastAlone = index === featuredProjects.length - 1 && featuredProjects.length % 2 === 1;
 
   return (
     <article
@@ -104,8 +108,7 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
       hidden={hidden}
       className={cn(
         "group relative min-w-0",
-        SPANS[index] ?? "lg:col-span-6",
-        isLastAlone && "lg:col-start-4",
+        SPANS[index],
         animateIn && "animate-fade-up",
       )}
     >
@@ -147,7 +150,7 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
             {project.title}
           </h3>
           {project.role ? (
-            <p className={cn("text-fluid-sm text-paper", hasImage ? "mt-3" : "mt-2")}>
+            <p className={cn("text-fluid-sm text-mute", hasImage ? "mt-3" : "mt-2")}>
               {project.role}
             </p>
           ) : null}
