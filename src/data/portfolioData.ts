@@ -117,7 +117,7 @@ const projects: Project[] = [
     categories: ["cinema", "documentarios"],
     presentationCategory: "Cinema • Longa documental",
     periodLabel: "2025",
-    role: "Montadora Principal",
+    role: "Editora",
     description: "Dirigido por Mariana Alvim, com Ana Botafogo.",
     media: {
       image: {
@@ -162,7 +162,7 @@ const projects: Project[] = [
     categories: ["shows"],
     presentationCategory: "Música & Grandes Eventos",
     periodLabel: "2024",
-    role: "Edição de Vídeos / Cenas de Telão",
+    role: "Editora",
     description: "Edição das projeções visuais da turnê.",
     media: {
       image: {
@@ -237,7 +237,7 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     presentationCategory: "Séries",
     periodLabel: "2023",
-    role: "Editora de Imagens",
+    role: "Editora",
     organizations: ["Fina Flor Filmes", "Canal Brasil"],
     media: {
       image: {
@@ -270,6 +270,31 @@ const projects: Project[] = [
     title: "Abre Coxia",
     categories: ["documentarios"],
     periodLabel: "2023",
+    role: "Editora",
+    description:
+      "Série de bastidores do teatro brasileiro, dirigida por Liz Reis, exibida no Canal Arte1.",
+    organizations: ["Canal Arte1"],
+    featuredOrder: 16,
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/otdwXqZQIYE/maxresdefault.jpg",
+        alt: "Abre Coxia, série do Canal Arte1 sobre bastidores de grupos teatrais (2023)",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "otdwXqZQIYE",
+        status: "available",
+        checkedOn: "2026-11-09",
+      },
+      externalLink: null,
+    },
+    sourceNotes: [
+      'Título fornecido no briefing como "Abre Coxia"; o material oficial do Canal Arte1 grafa "Abre a Coxia". Confirmar a grafia com a contratante.',
+    ],
   }),
 
   project({
@@ -278,6 +303,7 @@ const projects: Project[] = [
     title: "Podcast O Caso: Últimos Passos",
     categories: ["shows"],
     periodLabel: "2023",
+    role: "Editora",
     featuredOrder: 11,
     media: {
       image: {
@@ -303,7 +329,7 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     presentationCategory: "Streaming & Reality Shows",
     periodLabel: "2022",
-    role: "Editora de Imagens",
+    role: "Editora",
     organizations: ["Amazon Prime Video"],
     media: {
       image: {
@@ -369,6 +395,7 @@ const projects: Project[] = [
     title: "Do Esperar",
     categories: ["shows"],
     periodLabel: "2021",
+    role: "Editora",
     associatedCredit: "Numa Ciro",
   }),
 
@@ -378,6 +405,7 @@ const projects: Project[] = [
     title: "The Voice Kids",
     categories: ["tv-streaming"],
     periodLabel: "2020",
+    role: "Editora",
     media: {
       image: {
         src: "https://img.youtube.com/vi/V6tp7kIef1s/maxresdefault.jpg",
@@ -403,6 +431,7 @@ const projects: Project[] = [
     title: "Jogo de Panelas",
     categories: ["tv-streaming"],
     periodLabel: "2013–2020",
+    role: "Editora",
   }),
 
   project({
@@ -411,6 +440,7 @@ const projects: Project[] = [
     title: "Caldeirão do Huck",
     categories: ["tv-streaming"],
     periodLabel: "2007–2019",
+    role: "Editora",
     media: {
       image: {
         src: "https://img.youtube.com/vi/-F-1P_CdulA/maxresdefault.jpg",
@@ -437,7 +467,7 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     presentationCategory: "Reality Shows",
     periodLabel: "Edições 1, 3, 4, 5 e 13",
-    role: "Editora Sênior de Imagens",
+    role: "Editora",
     description: "Participação nas edições 1, 3, 4, 5 e 13 do Big Brother Brasil.",
     media: {
       image: {
@@ -470,6 +500,7 @@ const projects: Project[] = [
     title: "Encontro",
     categories: ["tv-streaming"],
     periodLabel: "2015/2016",
+    role: "Editora",
     sourceNotes: ['Original: "Encontro e É de Casa". ' + SPLIT_NOTE],
     media: {
       image: {
@@ -496,6 +527,7 @@ const projects: Project[] = [
     title: "É de Casa",
     categories: ["tv-streaming"],
     periodLabel: "2015/2016",
+    role: "Editora",
     sourceNotes: ['Original: "Encontro e É de Casa". ' + SPLIT_NOTE],
   }),
 
@@ -505,6 +537,7 @@ const projects: Project[] = [
     title: "Mercados",
     categories: ["tv-streaming"],
     periodLabel: "2015",
+    role: "Editora",
   }),
 
   project({
@@ -515,7 +548,7 @@ const projects: Project[] = [
     categories: ["documentarios"],
     presentationCategory: "Documentário",
     periodLabel: "2013",
-    role: "Editora Principal",
+    role: "Editora",
     description:
       "Direção de Sergio Raposo, com Marcelo Rosenbaum, no projeto A Gente Transforma. Exibição na Semana de Design de Milão.",
     organizations: ["+Globosat", "A Gente Transforma"],
@@ -554,6 +587,7 @@ const projects: Project[] = [
     title: "Bonitinha, Mas Ordinária",
     categories: ["cinema"],
     periodLabel: "2008/2013",
+    role: "Editora",
     media: {
       image: {
         src: "/images/projetos/bonitinha-mas-ordinaria.jpg",
@@ -584,6 +618,7 @@ const projects: Project[] = [
     title: "Mulheres de Aço",
     categories: ["documentarios"],
     periodLabel: "2012",
+    role: "Editora",
   }),
 
   project({
@@ -592,6 +627,7 @@ const projects: Project[] = [
     title: "Vida de Mallandro",
     categories: ["tv-streaming"],
     periodLabel: "2012",
+    role: "Editora",
     sourceNotes: [
       'Original: "Vida de Mallandro e Pequenos Notáveis". ' + SPLIT_NOTE,
       'Grafia "Mallandro" preservada como fornecida; confirmar.',
@@ -604,9 +640,11 @@ const projects: Project[] = [
     title: "Pequenos Notáveis",
     categories: ["tv-streaming"],
     periodLabel: "2012",
+    role: "Editora",
     sourceNotes: [
       'Original: "Vida de Mallandro e Pequenos Notáveis". ' + SPLIT_NOTE,
-    ],  }),
+    ],
+  }),
 
   project({
     id: "institucionais-lado-b",
@@ -614,6 +652,7 @@ const projects: Project[] = [
     title: "Institucionais Lado B",
     categories: ["shows"],
     periodLabel: "2009–2011",
+    role: "Editora",
   }),
 
   project({
@@ -622,6 +661,7 @@ const projects: Project[] = [
     title: "Arte In Natura",
     categories: ["documentarios"],
     periodLabel: "2009",
+    role: "Editora",
   }),
 
   project({
@@ -630,6 +670,7 @@ const projects: Project[] = [
     title: "Fantástico",
     categories: ["tv-streaming"],
     periodLabel: "2008",
+    role: "Editora",
     sourceNotes: [
       'Original: "Fantástico e Campanha Fernando Gabeira". ' + SPLIT_NOTE,
     ],
@@ -641,6 +682,7 @@ const projects: Project[] = [
     title: "Campanha Fernando Gabeira",
     categories: ["tv-streaming"],
     periodLabel: "2008",
+    role: "Editora",
     sourceNotes: [
       'Original: "Fantástico e Campanha Fernando Gabeira". ' + SPLIT_NOTE,
     ],
@@ -652,6 +694,7 @@ const projects: Project[] = [
     title: "Banda Infierno",
     categories: ["shows"],
     periodLabel: "2006",
+    role: "Editora",
   }),
 
   project({
@@ -660,6 +703,7 @@ const projects: Project[] = [
     title: "Avassaladoras – A Série",
     categories: ["tv-streaming"],
     periodLabel: "2006",
+    role: "Editora",
   }),
 
   project({
@@ -668,6 +712,7 @@ const projects: Project[] = [
     title: "Didi, o Caçador de Tesouros",
     categories: ["cinema"],
     periodLabel: "2006",
+    role: "Editora",
   }),
 
   project({
@@ -681,10 +726,10 @@ const projects: Project[] = [
     sourceNotes: [ROOTS_NOTE],
     media: {
       image: {
-        src: "https://img.youtube.com/vi/-yXCUvtc7ks/hqdefault.jpg",
+        src: "https://img.youtube.com/vi/-yXCUvtc7ks/sddefault.jpg",
         alt: "Nó, espetáculo da Companhia de Dança Deborah Colker (2005)",
-        width: 480,
-        height: 360,
+        width: 640,
+        height: 480,
         kind: "frame",
         focalPoint: "50% 50%",
       },
@@ -704,6 +749,7 @@ const projects: Project[] = [
     title: "Faixa de Areia",
     categories: ["documentarios"],
     periodLabel: "2004",
+    role: "Editora",
     featuredOrder: 12,
     media: {
       image: {
@@ -730,6 +776,7 @@ const projects: Project[] = [
     title: "Xuxa e o Tesouro da Cidade Perdida",
     categories: ["cinema"],
     periodLabel: "2004",
+    role: "Editora",
     featuredOrder: 13,
     media: {
       image: {
@@ -756,13 +803,14 @@ const projects: Project[] = [
     title: "Irmãos de Fé",
     categories: ["cinema"],
     periodLabel: "2004",
+    role: "Editora",
     featuredOrder: 14,
     media: {
       image: {
-        src: "https://img.youtube.com/vi/Lf_jq6EjJHU/hqdefault.jpg",
+        src: "https://img.youtube.com/vi/Lf_jq6EjJHU/sddefault.jpg",
         alt: "Irmãos de Fé, filme com Padre Marcelo Rossi (2004)",
-        width: 480,
-        height: 360,
+        width: 640,
+        height: 480,
         kind: "poster",
         focalPoint: "50% 50%",
       },
@@ -782,6 +830,7 @@ const projects: Project[] = [
     title: "Didi Quer Ser Criança",
     categories: ["cinema"],
     periodLabel: "2004",
+    role: "Editora",
     featuredOrder: 15,
     media: {
       image: {
@@ -808,6 +857,7 @@ const projects: Project[] = [
     title: "Fórum Social Mundial",
     categories: ["documentarios"],
     periodLabel: "2001–2003",
+    role: "Editora",
   }),
 
   project({
@@ -828,6 +878,7 @@ const projects: Project[] = [
     title: "Fama 1 e 2",
     categories: ["tv-streaming"],
     periodLabel: "2002",
+    role: "Editora",
     sourceNotes: ["Agrupamento de temporadas de uma mesma produção, preservado."],
   }),
 
@@ -848,6 +899,7 @@ const projects: Project[] = [
     title: "Pantaneiros",
     categories: ["documentarios"],
     periodLabel: "2001",
+    role: "Editora",
     associatedCredit: "Direção de José Padilha.",
   }),
 
@@ -857,6 +909,7 @@ const projects: Project[] = [
     title: "GNT Fashion",
     categories: ["tv-streaming"],
     periodLabel: "2000",
+    role: "Editora",
   }),
 
   project({
@@ -959,7 +1012,7 @@ export const portfolioData: PortfolioData = {
   featured: {
     title: "Obras selecionadas",
     support: "Cinema, televisão, streaming e projetos de palco.",
-    initialCount: 15,
+    initialCount: 16,
   },
 
   brands: {
@@ -1255,6 +1308,27 @@ export const portfolioData: PortfolioData = {
         "Vínculo com a Aquarela Multimídia configurado como estrutura profissional de suporte e ilha de edição.",
       blocking: false,
       status: "done",
+    },
+    {
+      id: "role-normalization",
+      label:
+        'Padrão de função aprovado pela contratante em 2026-11-09: "Editora" em todas as obras, com exceção do grupo Raízes (assistência a João Paulo de Carvalho). Substitui as variantes "Editora Principal", "Editora Sênior de Imagens", "Editora de Imagens", "Montadora Principal" e "Edição de Vídeos / Cenas de Telão".',
+      blocking: false,
+      status: "done",
+    },
+    {
+      id: "biography-verb-conflict",
+      label:
+        'A biografia (palavras da própria contratante) ainda diz "montadora de longas-metragens para cinema" e "Editora Sênior na TV Globo", o que hoje conflita com o crédito único "Editora" dos cards. Confirmar se o texto deve ser ajustado.',
+      blocking: false,
+      status: "pending",
+    },
+    {
+      id: "abre-coxia-grafia",
+      label:
+        'Grafia do título: briefing diz "Abre Coxia"; o material oficial do Canal Arte1 grafa "Abre a Coxia".',
+      blocking: false,
+      status: "pending",
     },
   ],
 };
