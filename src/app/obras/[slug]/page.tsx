@@ -8,6 +8,7 @@ import {
   dossierProjects,
   getProjectBySlug,
   hasPlayableVideo,
+  publicProjects,
   youtubeEmbedUrl,
   youtubeWatchUrl,
 } from "@/lib/projects";
@@ -21,7 +22,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return dossierProjects.map((project) => ({ slug: project.slug }));
+  return publicProjects.map((project) => ({ slug: project.slug }));
 }
 
 export const dynamicParams = false;

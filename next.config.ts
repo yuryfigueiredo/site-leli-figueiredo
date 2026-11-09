@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.scdn.co",
+        pathname: "/image/**",
+      },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+        pathname: "/vi/**",
+      },
+    ],
   },
 };
 

@@ -278,6 +278,22 @@ const projects: Project[] = [
     title: "Podcast O Caso: Últimos Passos",
     categories: ["shows"],
     periodLabel: "2023",
+    featuredOrder: 11,
+    media: {
+      image: {
+        src: "https://i.scdn.co/image/ab6765630000ba8a266fa5cf60b1011620463ab9",
+        alt: "Capa do podcast O Caso: Últimos Passos, sobre o assassinato de Claudia Lessin Rodrigues",
+        width: 640,
+        height: 640,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: null,
+      externalLink: {
+        url: "https://open.spotify.com/show/321Zb06c2Y7cyPeSbcVTwT",
+        label: "Ouvir no Spotify",
+      },
+    },
   }),
 
   project({
@@ -362,6 +378,23 @@ const projects: Project[] = [
     title: "The Voice Kids",
     categories: ["tv-streaming"],
     periodLabel: "2020",
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/V6tp7kIef1s/maxresdefault.jpg",
+        alt: "The Voice Kids, reality show de talentos musicais da TV Globo",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "V6tp7kIef1s",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -378,6 +411,23 @@ const projects: Project[] = [
     title: "Caldeirão do Huck",
     categories: ["tv-streaming"],
     periodLabel: "2007–2019",
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/-F-1P_CdulA/maxresdefault.jpg",
+        alt: "Caldeirão do Huck, programa de auditório da TV Globo",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "-F-1P_CdulA",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -421,6 +471,23 @@ const projects: Project[] = [
     categories: ["tv-streaming"],
     periodLabel: "2015/2016",
     sourceNotes: ['Original: "Encontro e É de Casa". ' + SPLIT_NOTE],
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/FADycjT20g0/maxresdefault.jpg",
+        alt: "Encontro com Fátima Bernardes, programa de variedades da TV Globo",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "FADycjT20g0",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -612,6 +679,23 @@ const projects: Project[] = [
     role: ROLE_ROOTS,
     associatedCredit: "Deborah Colker",
     sourceNotes: [ROOTS_NOTE],
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/-yXCUvtc7ks/hqdefault.jpg",
+        alt: "Nó, espetáculo da Companhia de Dança Deborah Colker (2005)",
+        width: 480,
+        height: 360,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "-yXCUvtc7ks",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -620,6 +704,24 @@ const projects: Project[] = [
     title: "Faixa de Areia",
     categories: ["documentarios"],
     periodLabel: "2004",
+    featuredOrder: 12,
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/z_p1MnqFYUc/sddefault.jpg",
+        alt: "Documentário Faixa de Areia (2004)",
+        width: 640,
+        height: 480,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "z_p1MnqFYUc",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -628,6 +730,24 @@ const projects: Project[] = [
     title: "Xuxa e o Tesouro da Cidade Perdida",
     categories: ["cinema"],
     periodLabel: "2004",
+    featuredOrder: 13,
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/4BkY6MOGnB4/maxresdefault.jpg",
+        alt: "Xuxa e o Tesouro da Cidade Perdida, filme com Xuxa Meneghel (2004)",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "yJSmH1xiJ-k",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -636,6 +756,24 @@ const projects: Project[] = [
     title: "Irmãos de Fé",
     categories: ["cinema"],
     periodLabel: "2004",
+    featuredOrder: 14,
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/Lf_jq6EjJHU/hqdefault.jpg",
+        alt: "Irmãos de Fé, filme com Padre Marcelo Rossi (2004)",
+        width: 480,
+        height: 360,
+        kind: "poster",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "Lf_jq6EjJHU",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -644,6 +782,24 @@ const projects: Project[] = [
     title: "Didi Quer Ser Criança",
     categories: ["cinema"],
     periodLabel: "2004",
+    featuredOrder: 15,
+    media: {
+      image: {
+        src: "https://img.youtube.com/vi/lbhPXV8RMZs/maxresdefault.jpg",
+        alt: "Didi Quer Ser Criança, filme com Renato Aragão (2004)",
+        width: 1280,
+        height: 720,
+        kind: "frame",
+        focalPoint: "50% 50%",
+      },
+      video: {
+        provider: "youtube",
+        id: "lbhPXV8RMZs",
+        status: "available",
+        checkedOn: "2026-11-08",
+      },
+      externalLink: null,
+    },
   }),
 
   project({
@@ -803,7 +959,7 @@ export const portfolioData: PortfolioData = {
   featured: {
     title: "Obras selecionadas",
     support: "Cinema, televisão, streaming e projetos de palco.",
-    initialCount: 10,
+    initialCount: 15,
   },
 
   brands: {

@@ -48,6 +48,11 @@ export function Header() {
     return () => observer.disconnect();
   }, []);
 
+  // Em rotas que não são a home, nenhuma seção está em vista — limpa o destaque.
+  useEffect(() => {
+    if (pathname !== "/") setActiveId(null);
+  }, [pathname]);
+
   // Menu e modal não podem ficar ativos ao mesmo tempo; menu fecha ao ampliar a tela.
   useEffect(() => {
     const onDialogOpen = () => setMenuOpen(false);

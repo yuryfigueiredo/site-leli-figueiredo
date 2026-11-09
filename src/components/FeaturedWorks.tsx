@@ -16,41 +16,21 @@ import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { WorkArtwork } from "./WorkArtwork";
 
-const { featured, navigation, uiLabels } = portfolioData;
+const { featured, uiLabels } = portfolioData;
 
 /**
- * Composição editorial assimétrica: cada posição tem sua largura em telas largas.
+ * Grid equilibrado: colunas iguais (6+6) em telas largas.
  * (a ordem segue `featuredOrder`; no celular tudo vira uma coluna.)
  */
-const SPANS = [
-  "lg:col-span-7",
-  "lg:col-span-5",
-  "lg:col-span-5",
-  "lg:col-span-7",
-  "lg:col-span-7",
-  "lg:col-span-5",
-  "lg:col-span-5",
-  "lg:col-span-7",
-  "lg:col-span-7",
-  "lg:col-span-5",
-];
+const SPANS = Array(15).fill("lg:col-span-6");
 
-const SIZES = [
-  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
-  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
-  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
-  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
-  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 700px, (min-width: 1024px) 58vw, 100vw",
-  "(min-width: 1320px) 500px, (min-width: 1024px) 41vw, 100vw",
-];
+const SIZES = Array(15).fill(
+  "(min-width: 1320px) 600px, (min-width: 1024px) 50vw, 100vw",
+);
 
 export function FeaturedWorks() {
   const [expanded, setExpanded] = useState(false);
-  const eyebrow = navigation.items.find((item) => item.id === "obras")?.label ?? "";
+  const eyebrow = "Obras selecionadas";
   const extras = featuredProjects.slice(featured.initialCount);
   const extraIds = extras.map((project) => `destaque-${project.slug}`).join(" ");
 
@@ -116,6 +96,7 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
     .filter(Boolean)
     .join(" • ");
   const order = String(project.featuredOrder ?? index + 1).padStart(2, "0");
+  const isLastAlone = index === featuredProjects.length - 1 && featuredProjects.length % 2 === 1;
 
   return (
     <article
@@ -124,6 +105,7 @@ function FeaturedCard({ project, index, hidden, animateIn }: FeaturedCardProps) 
       className={cn(
         "group relative min-w-0",
         SPANS[index] ?? "lg:col-span-6",
+        isLastAlone && "lg:col-start-4",
         animateIn && "animate-fade-up",
       )}
     >
