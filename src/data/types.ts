@@ -77,7 +77,7 @@ export interface Project {
   /** Apenas organizações atribuíveis a esta obra. */
   organizations: string[];
   media: ProjectMedia;
-  /** Posição na seleção (1–8); null = fora da vitrine. */
+  /** Posição na vitrine; null = fora dela. Segue o catálogo: mais recente → mais antigo. */
   featuredOrder: number | null;
   /** Rótulo da ação na vitrine quando não há vídeo disponível. */
   actionLabel: string | null;
@@ -221,6 +221,7 @@ export interface PortfolioData {
       viewCredits: string;
       moreFeatured: string;
       lessFeatured: string;
+      viewFilmography: string;
       moreCredits: string;
       close: string;
       watchOnYoutube: string;
