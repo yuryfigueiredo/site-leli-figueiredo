@@ -1013,7 +1013,7 @@ export const portfolioData: PortfolioData = {
     title: "Obras selecionadas",
     // {destaques} e {creditos} são preenchidos em tempo de render: nunca escreva os números à mão.
     support:
-      "Estas {destaques} obras são um recorte da trajetória: cinema, televisão, streaming e projetos de palco. Na filmografia estão os {creditos} créditos, desde 1998.",
+      "São {creditos} créditos em cinema, TV & streaming, documentários e shows. Aqui, {destaques} têm página própria; os demais estão listados na filmografia.",
     initialCount: 16,
   },
 
