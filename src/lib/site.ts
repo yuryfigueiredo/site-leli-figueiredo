@@ -1,6 +1,6 @@
 import { portfolioData } from "@/data/portfolioData";
 
-const { contact, publicationChecklist, seo } = portfolioData;
+const { contact, publicationChecklist, seo, uiLabels } = portfolioData;
 
 /** Domínio oficial, somente quando informado via variável de ambiente. */
 export const siteUrl: string | null = (() => {
@@ -29,6 +29,11 @@ export const whatsappUrl: string | null = (() => {
   if (!number) return null;
   return `https://wa.me/${number}?text=${encodeURIComponent(contact.whatsapp.message)}`;
 })();
+
+/** Único CTA de contato do site: sem número válido, o rótulo e o destino mudam juntos. */
+export const contactCta: { label: string; href: string; external: boolean } = whatsappUrl
+  ? { label: uiLabels.ctaWhatsapp, href: whatsappUrl, external: true }
+  : { label: uiLabels.ctaContact, href: "#contato", external: false };
 
 export const emailUrl: string | null = (() => {
   const email = contact.email?.trim();

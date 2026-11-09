@@ -5,15 +5,11 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { portfolioData } from "@/data/portfolioData";
-import { whatsappUrl } from "@/lib/site";
+import { contactCta } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { PROJECT_DIALOG_OPEN_EVENT } from "./ProjectDialogProvider";
 
 const { identity, navigation, uiLabels } = portfolioData;
-
-const cta = whatsappUrl
-  ? { label: uiLabels.ctaWhatsapp, href: whatsappUrl, external: true }
-  : { label: uiLabels.ctaContact, href: "#contato", external: false };
 
 const FOCUSABLE = 'a[href], button:not([disabled])';
 
@@ -154,12 +150,12 @@ export function Header() {
             })}
           </ul>
           <Link
-            href={cta.external ? cta.href : (isHomePage ? cta.href : `/${cta.href}`)}
-            {...(cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            href={contactCta.external ? contactCta.href : (isHomePage ? contactCta.href : `/${contactCta.href}`)}
+            {...(contactCta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="ml-4 inline-flex min-h-11 items-center border border-amber px-5 text-[0.9375rem] font-medium text-amber transition-colors hover:bg-amber hover:text-ink"
           >
-            {cta.label}
-            {cta.external ? <span className="sr-only">{uiLabels.externalLinkHint}</span> : null}
+            {contactCta.label}
+            {contactCta.external ? <span className="sr-only">{uiLabels.externalLinkHint}</span> : null}
           </Link>
         </nav>
 
@@ -213,15 +209,15 @@ export function Header() {
                   );
                 })}
               </ul>
-              {cta.external ? (
+              {contactCta.external ? (
                 <a
-                  href={cta.href}
+                  href={contactCta.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => closeMenu(false)}
                   className="mt-4 flex min-h-12 items-center justify-center border border-amber bg-amber px-5 font-medium text-ink"
                 >
-                  {cta.label}
+                  {contactCta.label}
                   <span className="sr-only">{uiLabels.externalLinkHint}</span>
                 </a>
               ) : null}

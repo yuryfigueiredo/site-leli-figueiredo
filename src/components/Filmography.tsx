@@ -54,7 +54,8 @@ export function Filmography() {
     <section
       id="filmografia"
       aria-labelledby="filmografia-titulo"
-      className="section-pad border-t border-line"
+      tabIndex={-1}
+      className="section-pad border-t border-line outline-none"
     >
       <div className="shell">
         <Reveal>

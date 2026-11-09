@@ -986,12 +986,6 @@ export const portfolioData: PortfolioData = {
     subheadline:
       "Uma trajetória em produções para TV Globo, Globo Filmes, Amazon Prime Video e cinema brasileiro.",
     reach: "Projetos no Brasil e no exterior • Presencial, híbrido ou remoto",
-    technicalLine: [
-      "Avid Media Composer",
-      "Adobe Premiere",
-      "Ilha própria no RJ",
-      "Graduada em Cinema",
-    ],
     disciplines: [
       "Cinema",
       "Televisão",
@@ -999,8 +993,9 @@ export const portfolioData: PortfolioData = {
       "Documentários",
       "Grandes eventos",
     ],
-    primaryCta: { label: "Explorar obras e créditos", href: "#obras" },
-    secondaryCtaLabel: "Conversar sobre um projeto",
+    primaryCta: { label: "Ver obras selecionadas", href: "#obras" },
+    secondaryCta: { label: "Ver filmografia completa", href: "#filmografia" },
+    trajectoryCta: { label: "Conhecer minha trajetória", href: "#sobre" },
     ruler: {
       start: { year: "1998", caption: "Primeira assistência" },
       end: { year: "Presente", caption: "Novas histórias em construção" },
@@ -1044,6 +1039,14 @@ export const portfolioData: PortfolioData = {
       'Trabalho com edição desde 1998, quando fiz minha primeira assistência ao lado do mestre João Paulo de Carvalho — nosso eterno "Fofinho" — no especial Prenda Minha, de Caetano Veloso. Foi com ele, trabalhando em projetos como os trailers de Orfeu e Bossa Nova e o documentário Niemeyer (Vídeo Filmes), que aprendi a delícia da nossa profissão: o entendimento de que o carinho, o respeito e o amor pelo material andam juntos na criação da história que vamos contar.',
       "Mais de duas décadas depois, em 2024, tive a alegria de reencontrar essa parceria editando os vídeos dos telões da histórica turnê Caetano & Bethânia. Ao longo dessa trajetória, consolidei uma carreira versátil como Editora Sênior na TV Globo (passando pelo Big Brother Brasil, Fantástico, The Voice Kids, Caldeirão, Encontro e pelo escritório da Globo Internacional em Nova York), montadora de longas-metragens para cinema (Marietta Baderna, Bonitinha, Mas Ordinária, Xuxa, Didi e Irmãos de Fé) e editora de séries e realities para plataformas como Amazon Prime Video (Caravana das Drags) e HBO Max (7 Chances Para...).",
       "Graduada em Cinema e operando em Avid Media Composer e Adobe Premiere, atuo hoje em projetos presenciais, híbridos ou remotos para produções em todo o Brasil e no exterior, contando também com estrutura de ilha de edição própria no Jardim Botânico (RJ) através da Aquarela Multimídia.",
+    ],
+    // Ferramentas e formação: vieram da linha de tags que estava no hero, onde
+    // competiam com os botões. Os mesmos fatos já aparecem em prosa no parágrafo acima.
+    technicalLine: [
+      "Avid Media Composer",
+      "Adobe Premiere",
+      "Ilha própria no RJ",
+      "Graduada em Cinema",
     ],
     // Trecho retirado literalmente do primeiro parágrafo.
     pullQuote:
@@ -1121,7 +1124,7 @@ export const portfolioData: PortfolioData = {
   },
 
   filmography: {
-    title: "Filmografia e créditos selecionados",
+    title: "Filmografia e créditos",
     initialCount: 12,
     filters: [
       { id: "all", label: "Todos" },

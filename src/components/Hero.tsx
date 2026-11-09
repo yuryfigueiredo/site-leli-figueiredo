@@ -1,16 +1,12 @@
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
-import { whatsappUrl } from "@/lib/site";
+import { contactCta } from "@/lib/site";
 import { ButtonLink } from "./ButtonLink";
 
 const { identity, hero } = portfolioData;
 
 /** Abertura tipográfica. Sem imagem aprovada, usa composição editorial com textura discreta. */
 export function Hero() {
-  const secondaryHref = whatsappUrl ?? "#contato";
-  const secondaryExternal = Boolean(whatsappUrl);
-
   return (
     <section
       aria-labelledby="hero-title"
@@ -35,21 +31,22 @@ export function Hero() {
 
           <p className="mt-6 text-[0.9375rem] tracking-wide text-paper">{hero.reach}</p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          {/* Grade 2×2: os dois saltos de catálogo em cima, contato e trajetória embaixo.
+              As colunas têm a largura do próprio texto, então os cantos alinham sem virar barra de formulário. */}
+          <div className="mt-9 grid justify-items-start gap-3 sm:grid-cols-[auto_auto] sm:justify-start">
             <ButtonLink href={hero.primaryCta.href} variant="primary">
               {hero.primaryCta.label}
-              <ArrowDown aria-hidden="true" strokeWidth={1.5} className="h-4 w-4" />
             </ButtonLink>
-            <ButtonLink href={secondaryHref} variant="ghost" external={secondaryExternal}>
-              {hero.secondaryCtaLabel}
+            <ButtonLink href={hero.secondaryCta.href} variant="ghost">
+              {hero.secondaryCta.label}
+            </ButtonLink>
+            <ButtonLink href={contactCta.href} variant="ghost" external={contactCta.external}>
+              {contactCta.label}
+            </ButtonLink>
+            <ButtonLink href={hero.trajectoryCta.href} variant="ghost">
+              {hero.trajectoryCta.label}
             </ButtonLink>
           </div>
-
-          <ul className="mt-10 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5 text-[0.9375rem] text-mute">
-            {hero.technicalLine.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
 
         <div className="hidden lg:col-span-5 lg:flex lg:flex-col">

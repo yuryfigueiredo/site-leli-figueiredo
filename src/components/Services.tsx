@@ -13,7 +13,8 @@ export function Services() {
     <section
       id="servicos"
       aria-labelledby="servicos-titulo"
-      className="section-pad border-t border-line bg-surface"
+      tabIndex={-1}
+      className="section-pad border-t border-line bg-surface outline-none"
     >
       <div className="shell">
         <Reveal>

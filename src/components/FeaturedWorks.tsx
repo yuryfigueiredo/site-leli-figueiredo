@@ -43,7 +43,8 @@ export function FeaturedWorks() {
     <section
       id="obras"
       aria-labelledby="obras-titulo"
-      className="border-t border-line pb-20 pt-12 sm:pb-24 lg:pb-32 lg:pt-14"
+      tabIndex={-1}
+      className="border-t border-line pb-20 pt-12 outline-none sm:pb-24 lg:pb-32 lg:pt-14"
     >
       <div className="shell">
         <Reveal>

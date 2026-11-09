@@ -148,10 +148,10 @@ export interface PortfolioData {
     headline: string;
     subheadline: string;
     reach: string;
-    technicalLine: string[];
     disciplines: string[];
     primaryCta: { label: string; href: string };
-    secondaryCtaLabel: string;
+    secondaryCta: { label: string; href: string };
+    trajectoryCta: { label: string; href: string };
     ruler: { start: { year: string; caption: string }; end: { year: string; caption: string } };
     image: ProjectImage | null;
   };
@@ -167,6 +167,7 @@ export interface PortfolioData {
   biography: {
     title: string;
     paragraphs: string[];
+    technicalLine: string[];
     pullQuote: string;
     portrait: ProjectImage | null;
   };

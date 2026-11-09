@@ -14,7 +14,8 @@ export function About() {
     <section
       id="sobre"
       aria-labelledby="sobre-titulo"
-      className="section-pad border-t border-line"
+      tabIndex={-1}
+      className="section-pad border-t border-line outline-none"
     >
       <div className="shell grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-16">
         <Reveal className="lg:col-span-5 lg:flex lg:flex-col lg:gap-8">
@@ -66,6 +67,12 @@ export function About() {
               </p>
             ))}
           </div>
+
+          <ul className="mt-10 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5 text-[0.9375rem] text-mute">
+            {biography.technicalLine.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>

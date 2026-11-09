@@ -21,7 +21,8 @@ export function Contact() {
     <section
       id="contato"
       aria-labelledby="contato-titulo"
-      className="section-pad border-t border-line bg-surface"
+      tabIndex={-1}
+      className="section-pad border-t border-line bg-surface outline-none"
     >
       <div className="shell grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
         <Reveal className="lg:col-span-7">
