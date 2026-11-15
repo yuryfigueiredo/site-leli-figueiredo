@@ -32,15 +32,18 @@ export function Hero() {
           <p className="mt-6 text-[0.9375rem] tracking-wide text-paper">{hero.reach}</p>
 
           {/* Grade 2×2: os dois saltos de catálogo em cima, contato e trajetória embaixo.
-              As colunas têm a largura do próprio texto, então os cantos alinham sem virar barra de formulário. */}
-          <div className="mt-9 grid justify-items-start gap-3 sm:grid-cols-[auto_auto] sm:justify-start">
-            <ButtonLink href={hero.primaryCta.href} variant="primary">
+              As colunas têm largura fixa (250px, o maior rótulo mais folga), então as quatro
+              caixas ficam do mesmo tamanho e o texto se centraliza dentro delas.
+              Rótulo novo mais longo que 250px quebra em duas linhas: conferir ao editar os CTAs.
+              O âmbar cheio é um só, e fica no contato: ver obras é navegação, falar é a ação. */}
+          <div className="mt-9 grid grid-cols-[15.625rem] gap-3 sm:grid-cols-[15.625rem_15.625rem]">
+            <ButtonLink href={hero.primaryCta.href} variant="ghost">
               {hero.primaryCta.label}
             </ButtonLink>
             <ButtonLink href={hero.secondaryCta.href} variant="ghost">
               {hero.secondaryCta.label}
             </ButtonLink>
-            <ButtonLink href={contactCta.href} variant="ghost" external={contactCta.external}>
+            <ButtonLink href={contactCta.href} variant="primary" external={contactCta.external}>
               {contactCta.label}
             </ButtonLink>
             <ButtonLink href={hero.trajectoryCta.href} variant="ghost">
