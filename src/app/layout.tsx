@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { portfolioData } from "@/data/portfolioData";
 import { isPreview, siteUrl } from "@/lib/site";
 import { Footer } from "@/components/Footer";
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <JsonLd />
+        <Analytics />
       </body>
     </html>
   );
